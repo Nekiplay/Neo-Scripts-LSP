@@ -39,4 +39,27 @@ function registerUseBlock(callback) end
 ---@param callback fun(info: attackblock) Callback function (no arguments)
 function registerAttackBlock(callback) end
 
+---Registers a function that is called every game tick.
+---@param callback fun() Callback function (no arguments)
+function registerClientTick(callback) end
+
+---Registers a function that is called after a game tick..
+---@param callback fun() Callback function (no arguments)
+function registerClientTickPost(callback) end
+
+--- @class blockupdate
+--- @field x number -- X position
+--- @field y number -- Y position
+--- @field z number -- Z position
+--- @field old block? -- Old block information
+--- @field new block? -- New block information
+
+---Registers a function that is called after a game tick..
+---@param callback fun(info: blockupdate) Callback function (no arguments)
+function registerBlockUpdate(callback) end
+
+---Registers a function that is called after a game tick..
+---@param callback fun(info: worldRenderer) Callback function (no arguments)
+function registerWorldRenderer(callback) end
+
 globals = {}
