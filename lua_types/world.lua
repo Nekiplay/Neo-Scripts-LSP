@@ -71,25 +71,6 @@ function world.getCollisionBoxes(x, y, z, block) end
 --- @param y number
 --- @param z number
 --- @param block block
---- @return box[]
----
---- @class raycastResult
---- @field type string block or entity or miss
----
---- @field data entity? Entity data only for entity type
----
---- @field x number? X coordinate of the end of the ray only for block type
---- @field y number? Y coordinate of the end of the ray only for block type
---- @field z number? z coordinate of the end of the ray only for block type
---- @field size direction? direction only for block type
----
---- @field blockPos vector3d? block postion only for block type
-
-
---- Get player eye postion
---- @param distance number
---- @return raycastResult
----
 function world.getOutlineBoxes(x, y, z, block) end
 
 --- @class raycastConfiguration
