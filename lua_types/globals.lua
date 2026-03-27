@@ -11,11 +11,11 @@ function registerUnloadCallback(callback) end
 --- @field z number -- Z position
 
 ---Registers a function that will be executed when the spawn particle.
----@param callback fun(particle: particle) Callback function (no arguments)
+---@param callback fun(particle: particle)
 function registerSpawnParticle(callback) end
 
 ---Registers a function that will be executed when the spawn particle.
----@param callback fun(slot: number, item: item?) Callback function (no arguments)
+---@param callback fun(slot: number, item: item?)
 function registerInventoryItemChange(callback) end
 
 --- @class useblock
@@ -25,7 +25,7 @@ function registerInventoryItemChange(callback) end
 --- @field z number -- Z position
 
 ---Registers a function that will be executed when the spawn particle.
----@param callback fun(info: useblock) Callback function (no arguments)
+---@param callback fun(info: useblock)
 function registerUseBlock(callback) end
 
 --- @class attackblock
@@ -36,7 +36,7 @@ function registerUseBlock(callback) end
 --- @field direction direction -- Direction
 
 ---Registers a function that will be executed when the spawn particle.
----@param callback fun(info: attackblock) Callback function (no arguments)
+---@param callback fun(info: attackblock)
 function registerAttackBlock(callback) end
 
 ---Registers a function that is called every game tick.
@@ -55,15 +55,19 @@ function registerClientTickPost(callback) end
 --- @field new block? -- New block information
 
 ---Registers a function that is called after a game tick.
----@param callback fun(info: blockupdate) Callback function (no arguments)
+---@param callback fun(info: blockupdate)
 function registerBlockUpdate(callback) end
 
----Registers a function that is needed for 3D rendering..
----@param callback fun(info: worldRenderer) Callback function (no arguments)
+---Registers a function that is needed for 3D rendering.
+---@param callback fun(info: worldRenderer)
 function registerWorldRenderer(callback) end
 
----Registers a function that is needed for 2D rendering..
----@param callback fun(info: twoRenderer) Callback function (no arguments)
+---Registers a function that is needed for 2D rendering.
+---@param callback fun(info: twoRenderer)
 function register2DRenderer(callback) end
+
+---Registers a function that is triggered when the keyboard and mouse are pressed..
+---@param callback fun(key: number, action: string)
+function registerKeyEvent(callback) end
 
 globals = {}
