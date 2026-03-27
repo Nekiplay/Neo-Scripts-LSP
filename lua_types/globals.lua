@@ -1,41 +1,41 @@
 ---@meta
 
----Registers a function that will be executed when the script is unloaded. (Unload)
+---Registers a function that will be executed when the script is unloaded.
 ---@param callback fun() Callback function (no arguments)
 function registerUnloadCallback(callback) end
 
 --- @class particle
 --- @field id number
---- @field x number -- X position
---- @field y number -- Y position
---- @field z number -- Z position
+--- @field x number
+--- @field y number
+--- @field z number
 
----Registers a function that will be executed when the spawn particle.
+---Registers a function that will be executed when a particle spawns.
 ---@param callback fun(particle: particle)
 function registerSpawnParticle(callback) end
 
----Registers a function that will be executed when the spawn particle.
+---Registers a function that will be executed when an inventory item changes.
 ---@param callback fun(slot: number, item: item?)
 function registerInventoryItemChange(callback) end
 
 --- @class useblock
 --- @field hand string
---- @field x number -- X position
---- @field y number -- Y position
---- @field z number -- Z position
+--- @field x number
+--- @field y number
+--- @field z number
 
----Registers a function that will be executed when the spawn particle.
+---Registers a function that will be executed when a block is used.
 ---@param callback fun(info: useblock)
 function registerUseBlock(callback) end
 
 --- @class attackblock
 --- @field hand string
---- @field x number -- X position
---- @field y number -- Y position
---- @field z number -- Z position
---- @field direction direction -- Direction
+--- @field x number
+--- @field y number
+--- @field z number
+--- @field direction direction
 
----Registers a function that will be executed when the spawn particle.
+---Registers a function that will be executed when a block is attacked.
 ---@param callback fun(info: attackblock)
 function registerAttackBlock(callback) end
 
@@ -47,14 +47,18 @@ function registerClientTick(callback) end
 ---@param callback fun() Callback function (no arguments)
 function registerClientTickPost(callback) end
 
---- @class blockupdate
---- @field x number -- X position
---- @field y number -- Y position
---- @field z number -- Z position
---- @field old block? -- Old block information
---- @field new block? -- New block information
+---Registers a function that is called before a game tick.
+---@param callback fun() Callback function (no arguments)
+function registerClientTickPre(callback) end
 
----Registers a function that is called after a game tick.
+--- @class blockupdate
+--- @field x number
+--- @field y number
+--- @field z number
+--- @field old block?
+--- @field new block?
+
+---Registers a function that is called when a block is updated.
 ---@param callback fun(info: blockupdate)
 function registerBlockUpdate(callback) end
 
@@ -66,8 +70,91 @@ function registerWorldRenderer(callback) end
 ---@param callback fun(info: twoRenderer)
 function register2DRenderer(callback) end
 
----Registers a function that is triggered when the keyboard and mouse are pressed..
+---Registers a function that is triggered when the keyboard and mouse are pressed.
 ---@param callback fun(key: number, action: string)
 function registerKeyEvent(callback) end
+
+--- @class messageevent
+--- @field message string
+--- @field sender string
+--- @field encrypted boolean
+
+---Registers a function that is triggered when a chat message is received.
+---@param callback fun(info: messageevent)
+function registerMessageEvent(callback) end
+
+---Registers a function that is triggered when a message is sent.
+---@param callback fun(message: string)
+function registerSendMessageEvent(callback) end
+
+---Registers a function that is triggered when a command is sent.
+---@param callback fun(command: string)
+function registerSendCommandEvent(callback) end
+
+--- @class locationchangeevent
+--- @field x number
+--- @field y number
+--- @field z number
+
+---Registers a function that is triggered when the player changes location.
+---@param callback fun(info: locationchangeevent)
+function registerLocationChangeEvent(callback) end
+
+---Registers a function that is triggered when ImGui is being rendered.
+---@param callback fun()
+function registerImGuiRenderEvent(callback) end
+
+--- @class rotationsEvent
+--- @field yaw number
+--- @field pitch number
+
+---Registers a function that is triggered when server-side rotation is detected.
+---@param callback fun(info: rotationsEvent)
+function registerServerSideRotationEvent(callback) end
+
+--- @class teleportEvent
+--- @field x number
+--- @field y number
+--- @field z number
+
+---Registers a function that is triggered when a server-side teleport is detected.
+---@param callback fun(info: teleportEvent)
+function registerServerSideTeleportEvent(callback) end
+
+-- ============================================
+-- UNREGISTER FUNCTIONS
+-- ============================================
+
+function unregisterSpawnParticle(callback) end
+function unregisterInventoryItemChange(callback) end
+function unregisterUseBlock(callback) end
+function unregisterAttackBlock(callback) end
+function unregisterClientTick(callback) end
+function unregisterClientTickPost(callback) end
+function unregisterClientTickPre(callback) end
+function unregisterBlockUpdate(callback) end
+function unregisterWorldRenderer(callback) end
+function unregister2DRenderer(callback) end
+function unregisterKeyEvent(callback) end
+function unregisterMessageEvent(callback) end
+function unregisterSendMessageEvent(callback) end
+function unregisterSendCommandEvent(callback) end
+function unregisterLocationChangeEvent(callback) end
+function unregisterImGuiRenderEvent(callback) end
+function unregisterServerSideRotationEvent(callback) end
+function unregisterServerSideTeleportEvent(callback) end
+
+-- ============================================
+-- COMMANDS
+-- ============================================
+
+---Register a custom command.
+---@param name string Command name
+---@param callback fun(args: string) Callback function that receives command arguments as string
+function registerCommand(name, callback) end
+
+---Unregister a custom command.
+---@param name string Command name
+function unregisterCommand(name) end
 
 globals = {}
