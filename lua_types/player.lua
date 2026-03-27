@@ -22,6 +22,11 @@ local player = {}
 --- @return boolean Return true if success
 function player.addMessage(text) end
 
+---Add local message
+--- @param yaw number
+--- @param pitch number
+function player.setRotation(yaw, pitch) end
+
 --- Send message to server
 --- @param text string -- message
 --- @return boolean Return true if success
