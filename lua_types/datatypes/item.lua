@@ -1,5 +1,9 @@
 --- @meta
 
+--- @class enchantments
+--- @field name string -- Enchantment name
+--- @field level number -- Enchantment level
+
 --- @class item
 --- @field count number Item count
 --- @field max_count number Item maximum count
@@ -16,3 +20,5 @@
 --- @field is_enchanted boolean Check if item has glinth effect
 --- @field uuid string Item uuid on Hypixel SkyBlock
 --- @field map map? Data for working with the “Map” subject
+--- @field lore string[] Item lore
+--- @field enchantments enchantments[] Item enchantments

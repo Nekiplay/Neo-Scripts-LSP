@@ -1,15 +1,47 @@
 --- @meta
 
+--- @class effect
+--- @field type string
+--- @field duration number
+--- @field amplifier number
+
 --- @class entity
 --- @field id string Entity id
 --- @field uuid string Entity uuid
 --- @field name string Entity name
 --- @field display_name string Entity formatted name
---- @field health  number Entity health
---- @field max_health number Entity max health
 --- @field is_alive boolean Check entity health > 0
 --- @field is_child boolean Check entity is child
---- @field type boolean entity type like "entity.minecraft.cow"
---- @field position vector3d entity position
---- @field box box entity box
---- @field velocity vector3d entity velocity
+--- @field is_baby boolean Check entity is child
+--- @field type boolean Entity type like "entity.minecraft.cow"
+--- @field x number Entity position x
+--- @field y number Entity position y
+--- @field z number Entity position z
+--- @field pos vector3d Entity position
+--- @field position vector3d Entity position
+--- @field box box Entity box
+--- @field velocity_x number Entity x velocity
+--- @field velocity_y number Entity y velocity
+--- @field velocity_z number Entity z velocity
+--- @field velocity vector3d Entity velocity
+--- @field width number Entity width
+--- @field height number Entity height
+--- @field yaw number Entity yaw rotation
+--- @field pitch number Entity pitch rotation
+--- @field is_on_ground boolean Check entity is on ground
+--- @field is_touching_water boolean Check entity is touching water
+--- @field is_in_lava boolean Check entity is touching lava
+--- @field is_sneaking boolean Check entity is sneaking
+--- @field is_sprinting boolean Check entity is sprinting
+--- @field passengers entity[] Drivers
+--- @field distance_to_player number Distance to local player
+--- @field item item? Item for ItemFrames and ItemEntity
+--- @field health number Entity health
+--- @field max_health number Entity maximum health
+--- @field main_hand item? Get an item in main hand
+--- @field off_hand item? Get an item in off hand
+--- @field head item? Get an item in head slot
+--- @field chest item? Get an item in chestplate slot
+--- @field legs item? Get an item in leggins slot
+--- @field feet item? Get an item in feet slot
+--- @field active_effects effect[]? Get entity potion effects

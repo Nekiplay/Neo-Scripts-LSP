@@ -28,4 +28,15 @@ function registerInventoryItemChange(callback) end
 ---@param callback fun(info: useblock) Callback function (no arguments)
 function registerUseBlock(callback) end
 
+--- @class attackblock
+--- @field hand string
+--- @field x number -- X position
+--- @field y number -- Y position
+--- @field z number -- Z position
+--- @field direction direction -- Direction
+
+---Registers a function that will be executed when the spawn particle.
+---@param callback fun(info: attackblock) Callback function (no arguments)
+function registerAttackBlock(callback) end
+
 globals = {}
