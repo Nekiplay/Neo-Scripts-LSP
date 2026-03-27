@@ -5,20 +5,24 @@ threads = {}
 
 --- Runs a function in a thread
 --- @param callback fun() The function that will be called in the thread
---- @return number Thread id
+--- @return number threadId Thread id
 function threads.startThread(callback) end
 
 --- Call to wait for the thread to complete
---- @param id number Thread id
-function threads.joinThread(id) end
+--- @param threadId number Thread id
+function threads.joinThread(threadId) end
 
 --- Checks if the thread is running
---- @param id number Thread id
-function threads.isAlive(id) end
+--- @param threadId number Thread id
+function threads.isAlive(threadId) end
 
 --- Stops the thread
---- @param id number Thread id
-function threads.stopThread(id) end
+--- @param threadId number Thread id
+function threads.stopThread(threadId) end
+
+--- Stops the thread
+--- @param threadId number Thread id
+function threads.interruptThread(threadId) end
 
 --- Stops the thread
 --- @param delay number Delay in (ms)
