@@ -5,7 +5,7 @@
     "checkThirdParty": false
   },
   "diagnostics": {
-    "globals": ["globals"],
+    "globals": ["globals", "luajava"],
     "disable": ["lowercase-global"]
   },
   "runtime": {
