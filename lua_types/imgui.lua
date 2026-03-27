@@ -3,16 +3,11 @@
 --- @class imgui
 local imgui = {}
 
---- @class imgui.constants
-local imgui.constants = {}
-
---- @class imgui.dl
-local imgui.dl = {}
-
 -- ============================================
 -- CONSTANTS - Window Flags
 -- ============================================
 
+imgui.constants = {}
 imgui.constants.WindowFlags_None = 0
 imgui.constants.WindowFlags_NoTitleBar = 0
 imgui.constants.WindowFlags_NoResize = 0
@@ -132,6 +127,12 @@ imgui.constants.TableFlags_BordersInner = 0
 imgui.constants.TableFlags_BordersInnerH = 0
 imgui.constants.TableFlags_BordersInnerV = 0
 imgui.constants.TableFlags_Resizable = 0
+
+-- ============================================
+-- DRAW LIST
+-- ============================================
+
+imgui.dl = {}
 
 -- ============================================
 -- WINDOW MANAGEMENT
