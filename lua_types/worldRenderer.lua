@@ -3,19 +3,14 @@
 --- @class worldRenderer
 local worldRenderer = {}
 
---- @param x number
---- @param y number
---- @param z number
---- @param x2 number
---- @param y2 number
---- @param z2 number
+--- @param box box
 --- @param red number
 --- @param green number
 --- @param blue number
 --- @param alpha number
 --- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderFilled(x, y, z, x2, y2, z2, red, green, blue, alpha, throughWalls) end
+function worldRenderer.renderFilled(box, red, green, blue, alpha, throughWalls) end
 
 --- @param x number
 --- @param y number
@@ -30,12 +25,7 @@ function worldRenderer.renderFilled(x, y, z, x2, y2, z2, red, green, blue, alpha
 --- @return boolean
 function worldRenderer.renderFilledCircle(x, y, z, radius, segments, red, green, blue, alpha, throughWalls) end
 
---- @param x number
---- @param y number
---- @param z number
---- @param x2 number
---- @param y2 number
---- @param z2 number
+--- @param box box
 --- @param red number
 --- @param green number
 --- @param blue number
@@ -43,7 +33,7 @@ function worldRenderer.renderFilledCircle(x, y, z, radius, segments, red, green,
 --- @param lineWidth number
 --- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderOutline(x, y, z, x2, y2, z2, red, green, blue, alpha, lineWidth, throughWalls) end
+function worldRenderer.renderOutline(box, red, green, blue, alpha, lineWidth, throughWalls) end
 
 --- @param x number
 --- @param y number
@@ -142,7 +132,8 @@ function worldRenderer.renderLineFromCursor(x, y, z, red, green, blue, alpha, li
 --- @param throughWalls boolean
 --- @return boolean
 function worldRenderer.renderImage(path, x, y, z, width, height, regionWidth, regionHeight, offsetX, offsetY, offsetZ,
-                                   red, green, blue, alpha, throughWalls) end
+                                   red, green, blue, alpha, throughWalls)
+end
 
 --- @param x number
 --- @param y number

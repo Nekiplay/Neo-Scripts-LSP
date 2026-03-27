@@ -71,7 +71,7 @@ function twoRenderer.renderPolygon(points, red, green, blue, alpha) end
 
 --- @param x number
 --- @param y number
---- @param itemStack table
+--- @param itemStack item
 --- @param scale number
 --- @return boolean
 function twoRenderer.renderItemStack(x, y, itemStack, scale) end
