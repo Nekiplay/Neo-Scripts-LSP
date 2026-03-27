@@ -70,7 +70,7 @@ function world.getCollisionBoxes(x, y, z, block) end
 --- @param x number
 --- @param y number
 --- @param z number
---- @param box[]
+--- @return box[]
 function world.getOutlineBoxes(x, y, z, block) end
 
 --- @class raycastConfiguration
