@@ -1,0 +1,12 @@
+--- @meta
+
+--- @class box
+--- @field minX number Minimum value along the x-axis
+--- @field minY number Minimum value along the y-axis
+--- @field minZ number Minimum value along the z-axis
+--- @field maxX number Maximum value along the x-axis
+--- @field maxY number Maximum value along the y-axis
+--- @field maxZ number Maximum value along the z-axis
+---
+--- @field min vector3d Maximum values
+--- @field max vector3d Maximum values

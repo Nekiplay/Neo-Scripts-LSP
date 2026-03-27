@@ -1,0 +1,15 @@
+--- @meta
+
+--- @class entity
+--- @field id string Entity id
+--- @field uuid string Entity uuid
+--- @field name string Entity name
+--- @field display_name string Entity formatted name
+--- @field health  number Entity health
+--- @field max_health number Entity max health
+--- @field is_alive boolean Check entity health > 0
+--- @field is_child boolean Check entity is child
+--- @field type boolean entity type like "entity.minecraft.cow"
+--- @field position vector3d entity position
+--- @field box box entity box
+--- @field velocity vector3d entity velocity

@@ -1,0 +1,18 @@
+--- @meta
+
+--- @class item
+--- @field count number Item count
+--- @field max_count number Item maximum count
+--- @field name string Item name
+--- @field display_name string Item formatted name
+--- @field is_empty boolean Check if item is empty
+--- @field head_texture string? Return string if item its head and this has texture
+--- @field skyblock_id string? Return string if has Hypixel SkyBlock Id
+--- @field neu_id string? Return string if has NotEgnoughtUpdates Id
+--- @field reforge_modifier string? Return string item has reforge on Hypixel SkyBlock
+--- @field is_stackable boolean Check if item stackable
+--- @field is_recombobulated boolean Check if item recombobulated on Hypixel SkyBlock
+--- @field is_museum_donated boolean Check if item donated to museum on Hypixel SkyBlock
+--- @field is_enchanted boolean Check if item has glinth effect
+--- @field uuid string Item uuid on Hypixel SkyBlock
+--- @field map map? Data for working with the “Map” subject
