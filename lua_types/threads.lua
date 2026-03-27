@@ -20,4 +20,8 @@ function threads.isAlive(id) end
 --- @param id number Thread id
 function threads.stopThread(id) end
 
+--- Stops the thread
+--- @param delay number Delay in (ms)
+function threads.sleep(delay) end
+
 return threads
