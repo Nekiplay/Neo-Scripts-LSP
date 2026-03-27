@@ -182,9 +182,24 @@ function imgui.bulletText(text) end
 -- IMAGES
 -- ============================================
 
---- Create an image object from path
---- @param path string
---- @return userdata
+--- @class imgui.Image
+imgui.Image = {}
+
+---Load an image from path and return.
+---@param path string Path to image file
+---@return imgui.Image
+function imgui.Image.loadImage(path) end
+
+---Load an image from path and return.
+---@return number
+function imgui.Image.getId() end
+
+---Free image object from memory.
+function imgui.Image.release() end
+
+---Create an image object from path.
+---@param path string Path to image file
+---@return imgui.Image
 function imgui.createImageObject(path) end
 
 --- Render an image
