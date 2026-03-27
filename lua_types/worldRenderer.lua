@@ -3,62 +3,182 @@
 --- @class worldRenderer
 local worldRenderer = {}
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param x2 number
+--- @param y2 number
+--- @param z2 number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderFilled(info) end
+function worldRenderer.renderFilled(x, y, z, x2, y2, z2, red, green, blue, alpha, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param radius number
+--- @param segments number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderFilledCircle(info) end
+function worldRenderer.renderFilledCircle(x, y, z, radius, segments, red, green, blue, alpha, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param x2 number
+--- @param y2 number
+--- @param z2 number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param lineWidth number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderOutline(info) end
+function worldRenderer.renderOutline(x, y, z, x2, y2, z2, red, green, blue, alpha, lineWidth, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param radius number
+--- @param segments number
+--- @param thickness number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderOutlineCircle(info) end
+function worldRenderer.renderOutlineCircle(x, y, z, radius, segments, thickness, red, green, blue, alpha, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param radius number
+--- @param height number
+--- @param segments number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderCylinder(info) end
+function worldRenderer.renderCylinder(x, y, z, radius, height, segments, red, green, blue, alpha, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param radius number
+--- @param segments number
+--- @param rings number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderSphere(info) end
+function worldRenderer.renderSphere(x, y, z, radius, segments, rings, red, green, blue, alpha, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param text string
+--- @param scale number
+--- @param throughWalls boolean
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param qx number? optional
+--- @param qy number? optional
+--- @param qz number? optional
+--- @param qw number? optional
 --- @return boolean
-function worldRenderer.renderText(info) end
+function worldRenderer.renderText(x, y, z, text, scale, throughWalls, red, green, blue, qx, qy, qz, qw) end
 
---- @param info table
+--- @param points table
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param lineWidth number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderLinesFromPoints(info) end
+function worldRenderer.renderLinesFromPoints(points, red, green, blue, alpha, lineWidth, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param lineWidth number
 --- @return boolean
-function worldRenderer.renderLineFromCursor(info) end
+function worldRenderer.renderLineFromCursor(x, y, z, red, green, blue, alpha, lineWidth) end
 
---- @param info table
+--- @param path string
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param width number
+--- @param height number
+--- @param regionWidth number
+--- @param regionHeight number
+--- @param offsetX number
+--- @param offsetY number
+--- @param offsetZ number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderImage(info) end
+function worldRenderer.renderImage(path, x, y, z, width, height, regionWidth, regionHeight, offsetX, offsetY, offsetZ,
+                                   red, green, blue, alpha, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param red number
+--- @param green number
+--- @param blue number
 --- @return boolean
-function worldRenderer.renderBeaconBeam(info) end
+function worldRenderer.renderBeaconBeam(x, y, z, red, green, blue) end
 
---- @param info table
+--- @param points table
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param throughWalls boolean
 --- @return boolean
-function worldRenderer.renderQuad(info) end
+function worldRenderer.renderQuad(points, red, green, blue, alpha, throughWalls) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param id number
 --- @return boolean
-function worldRenderer.renderHologramBlock(info) end
+function worldRenderer.renderHologramBlock(x, y, z, id) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param id number
 --- @return boolean
-function worldRenderer.renderBlock(info) end
+function worldRenderer.renderBlock(x, y, z, id) end
 
---- @param info table
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param id string
 --- @return boolean
-function worldRenderer.renderItem(info) end
+function worldRenderer.renderItem(x, y, z, id) end

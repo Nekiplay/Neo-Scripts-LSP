@@ -4,29 +4,74 @@
 local twoRenderer = {}
 
 --- @class scale
---- @field wight number
+--- @field width number
 --- @field height number
 
 --- @return scale
 function twoRenderer.getWindowScale() end
 
 --- @param text string
+--- @return number
 function twoRenderer.getTextWidth(text) end
 
---- @param info table
-function twoRenderer.renderText(info) end
+--- @param x number
+--- @param y number
+--- @param text string
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param shadow boolean
+--- @param scale number
+--- @return boolean
+function twoRenderer.renderText(x, y, text, red, green, blue, alpha, shadow, scale) end
 
---- @param info table
-function twoRenderer.renderImage(info) end
+--- @param path string
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param u number
+--- @param v number
+--- @param regionWidth number
+--- @param regionHeight number
+--- @return boolean
+function twoRenderer.renderImage(path, x, y, width, height, u, v, regionWidth, regionHeight) end
 
---- @param info table
-function twoRenderer.renderRect(info) end
+--- @param x number
+--- @param y number
+--- @param width number
+--- @param height number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @return boolean
+function twoRenderer.renderRect(x, y, width, height, red, green, blue, alpha) end
 
---- @param info table
-function twoRenderer.renderLine(info) end
+--- @param x1 number
+--- @param y1 number
+--- @param x2 number
+--- @param y2 number
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @param thickness number
+--- @return boolean
+function twoRenderer.renderLine(x1, y1, x2, y2, red, green, blue, alpha, thickness) end
 
---- @param info table
-function twoRenderer.renderPolygon(info) end
+--- @param points table
+--- @param red number
+--- @param green number
+--- @param blue number
+--- @param alpha number
+--- @return boolean
+function twoRenderer.renderPolygon(points, red, green, blue, alpha) end
 
---- @param info table
-function twoRenderer.renderItemStack(info) end
+--- @param x number
+--- @param y number
+--- @param itemStack table
+--- @param scale number
+--- @return boolean
+function twoRenderer.renderItemStack(x, y, itemStack, scale) end
