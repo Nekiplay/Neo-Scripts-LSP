@@ -24,6 +24,18 @@ function world.getBlock(x, y, z) end
 --- @return block
 function world.getBlockState(x, y, z) end
 
+--- Checks whether the chunk has been loaded based on its coordinates
+--- @param x number
+--- @param y number
+--- @param z number
+--- @return boolean
+function world.isBlockLoaded(x, y, z) end
+
+--- Retrieves an entity by its ID
+--- @param id number
+--- @return entity?
+function world.getEntityById(id) end
+
 --- Returns a list of all entities within the rendering radius
 --- @return entity[] entities List of entities (array of Entity objects)
 function world.getEntities() end
@@ -35,5 +47,48 @@ function world.getLivingEntities() end
 --- Returns a list of all entities within the rendering radius
 --- @return entity[] entities List of armor stand entities (array of Entity objects)
 function world.getArmorStandEntities() end
+
+--- Returns a list of all entities within the specified box
+--- @param box box
+--- @return entity[] entities List of armor stand entities (array of Entity objects)
+function world.getEntitiesInBox(box) end
+
+--- Returns a list of all armor stand entities within the specified box
+--- @param box box
+--- @return entity[] entities List of armor stand entities (array of Entity objects)
+function world.getArmorStandEntitiesInBox(box) end
+
+--- Receives a block collision
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param block block
+--- @return box[]
+function world.getCollisionBoxes(x, y, z, block) end
+
+--- Gets the block outline
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param block block
+--- @return box[]
+function world.getOutlineBoxes(x, y, z, block) end
+
+--- @class raycastConfiguration
+--- @field startX number
+--- @field startY number
+--- @field startZ number
+
+--- @field endX number
+--- @field endY number
+--- @field endZ number
+---
+--- @field include_fluid boolean? optional (default false)
+--- @field include_entity include_entity? optional (default false)
+
+--- Gets the block outline
+--- @param configuration raycastConfiguration
+--- @return box[]
+function world.raycast(configuration) end
 
 return world
