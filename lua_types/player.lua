@@ -158,4 +158,28 @@ function player.getEyePosition(hand) end
 --- @return boolean
 function player.addToast(title, message, time) end
 
+--- Get player eye postion
+--- @param yaw number Player yaw
+--- @param pitch number Player pitch
+--- @return vector3d
+function player.getDirectionFromYawPitch(yaw, pitch) end
+
+--- @class raycastResult
+--- @field type string block or entity or miss
+---
+--- @field data entity? Entity data only for entity type
+---
+--- @field x number? X coordinate of the end of the ray only for block type
+--- @field y number? Y coordinate of the end of the ray only for block type
+--- @field z number? z coordinate of the end of the ray only for block type
+--- @field size direction? direction only for block type
+---
+--- @field blockPos vector3d? block postion only for block type
+
+
+--- Get player eye postion
+--- @param distance number
+--- @return raycastResult
+function player.raycast(distance) end
+
 return player

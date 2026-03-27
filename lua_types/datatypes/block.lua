@@ -1,0 +1,15 @@
+--- @meta
+
+--- @class block
+--- @field id number Block id
+--- @field name string Block name like "block.minecraft.lever"
+--- @field type string Block type
+--- @field hardness number
+--- @field blast_resistance number
+--- @field is_solid boolean
+--- @field is_liquid boolean
+--- @field is_air boolean
+--- @field age number? Crop age (only for crop blocks)
+--- @field delay number? Repeater delay (only for repeaters)
+--- @field locked boolean? Check if repeater locked (only for repeaters)
+--- @field power number? redstone wire power (only for redstone blocks)
