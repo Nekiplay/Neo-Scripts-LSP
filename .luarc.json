@@ -1,5 +1,8 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LuaLS/lua-language-server/master/resource/schema.json",
+  "$schema": "https://www.schemastore.org/stylua.json",
+  "runtime": {
+    "version": "Lua 5.2"
+  },
   "workspace": {
     "library": ["lua_types"],
     "checkThirdParty": false
@@ -7,9 +10,6 @@
   "diagnostics": {
     "globals": ["globals", "luajava"],
     "disable": ["lowercase-global"]
-  },
-  "runtime": {
-    "version": "Lua 5.2"
   },
   "hint": {
     "enable": true,
