@@ -400,7 +400,7 @@ function imgui.endTooltip() end
 --- @return boolean
 function imgui.beginPopup(id, flags) end
 
---- Begin popup
+--- Open popup
 --- @param id string
 --- @param flags number optional
 --- @return boolean
