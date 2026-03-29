@@ -23,6 +23,7 @@ function worldRenderer.renderFilled(box, red, green, blue, alpha, throughWalls) 
 --- @param alpha number
 --- @param throughWalls boolean
 --- @return boolean
+--- @overload fun(pos: vector3d, radius: number, segments: number, red: number, green: number, blue: number, alpha: number, throughWalls: boolean): boolean
 function worldRenderer.renderFilledCircle(x, y, z, radius, segments, red, green, blue, alpha, throughWalls) end
 
 --- @param box box
@@ -47,6 +48,7 @@ function worldRenderer.renderOutline(box, red, green, blue, alpha, lineWidth, th
 --- @param alpha number
 --- @param throughWalls boolean
 --- @return boolean
+--- @overload fun(pos: vector3d, radius: number, segments: number, red: number, green: number, blue: number, alpha: number, throughWalls: boolean): boolean
 function worldRenderer.renderOutlineCircle(x, y, z, radius, segments, thickness, red, green, blue, alpha, throughWalls) end
 
 --- @param x number
@@ -61,6 +63,7 @@ function worldRenderer.renderOutlineCircle(x, y, z, radius, segments, thickness,
 --- @param alpha number
 --- @param throughWalls boolean
 --- @return boolean
+--- @overload fun(pos: vector3d, radius: number, height: number, red: number, green: number, blue: number, alpha: number, throughWalls: boolean): boolean
 function worldRenderer.renderCylinder(x, y, z, radius, height, segments, red, green, blue, alpha, throughWalls) end
 
 --- @param x number
@@ -75,6 +78,7 @@ function worldRenderer.renderCylinder(x, y, z, radius, height, segments, red, gr
 --- @param alpha number
 --- @param throughWalls boolean
 --- @return boolean
+--- @overload fun(pos: vector3d, radius: number, segments: number, rings: number, red: number, green: number, blue: number, alpha: number, throughWalls: boolean): boolean
 function worldRenderer.renderSphere(x, y, z, radius, segments, rings, red, green, blue, alpha, throughWalls) end
 
 --- @param x number
@@ -91,6 +95,7 @@ function worldRenderer.renderSphere(x, y, z, radius, segments, rings, red, green
 --- @param qz number? optional quanterion z
 --- @param qw number? optional quanterion w
 --- @return boolean
+--- @overload fun(pos: vector3d, text: string, scale: number, red: number, green: number, blue: number, alpha: number, throughWalls: boolean): boolean
 function worldRenderer.renderText(x, y, z, text, scale, throughWalls, red, green, blue, qx, qy, qz, qw) end
 
 --- @param points table
@@ -112,6 +117,7 @@ function worldRenderer.renderLinesFromPoints(points, red, green, blue, alpha, li
 --- @param alpha number
 --- @param lineWidth number
 --- @return boolean
+--- @overload fun(pos: vector3d, red: number, green: number, blue: number, alpha: number, lineWidth: number): boolean
 function worldRenderer.renderLineFromCursor(x, y, z, red, green, blue, alpha, lineWidth) end
 
 --- @param path string
@@ -131,6 +137,7 @@ function worldRenderer.renderLineFromCursor(x, y, z, red, green, blue, alpha, li
 --- @param alpha number
 --- @param throughWalls boolean
 --- @return boolean
+--- @overload fun(path: string, pos: vector3d, width: number, height: number, regionWidth: number, regionHeight: number, offsetX: number, offsetY: number, offsetZ:number, red: number, green: number, blue: number, alpha: number, throughWalls: boolean): boolean
 function worldRenderer.renderImage(path, x, y, z, width, height, regionWidth, regionHeight, offsetX, offsetY, offsetZ,
                                    red, green, blue, alpha, throughWalls)
 end
@@ -142,6 +149,7 @@ end
 --- @param green number
 --- @param blue number
 --- @return boolean
+--- @overload fun(pos: vector3d, red: number, green: number, blue: number, alpha: number): boolean
 function worldRenderer.renderBeaconBeam(x, y, z, red, green, blue) end
 
 --- @param points table
@@ -158,6 +166,8 @@ function worldRenderer.renderQuad(points, red, green, blue, alpha, throughWalls)
 --- @param z number
 --- @param id number
 --- @return boolean
+--- @overload fun(pos: vector3d, id: number): boolean
+--- @overload fun(pos: vector3d, blockstate: block): boolean
 function worldRenderer.renderHologramBlock(x, y, z, id) end
 
 --- @param x number
@@ -165,11 +175,6 @@ function worldRenderer.renderHologramBlock(x, y, z, id) end
 --- @param z number
 --- @param id number
 --- @return boolean
+--- @overload fun(pos: vector3d, id: number): boolean
+--- @overload fun(pos: vector3d, blockstate: block): boolean
 function worldRenderer.renderBlock(x, y, z, id) end
-
---- @param x number
---- @param y number
---- @param z number
---- @param id string
---- @return boolean
-function worldRenderer.renderItem(x, y, z, id) end

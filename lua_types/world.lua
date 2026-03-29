@@ -4,31 +4,35 @@
 world = {}
 
 --- Gets yaw and pitch to look exactly at the specified coordinates
---- @param x number
---- @param y number
---- @param z number
+--- @param x number | blockpos The X coordinate or a blockpos object.
+--- @param y? number The Y coordinate (optional if blockpos is provided).
+--- @param z? number The Z coordinate (optional if blockpos is provided).
+--- @overload fun(pos: blockpos): rotation
 --- @return rotation
 function world.getRotation(x, y, z) end
 
---- Gets information about block at posistion
---- @param x number
---- @param y number
---- @param z number
+--- Returns the block type at the specified position.
+--- @param x number The X coordinate or a blockpos object.
+--- @param y? number The Y coordinate (optional if blockpos is provided).
+--- @param z? number The Z coordinate (optional if blockpos is provided).
 --- @return block
+--- @overload fun(pos: blockpos): block
 function world.getBlock(x, y, z) end
 
---- Gets information about block at posistion
---- @param x number
---- @param y number
---- @param z number
+--- Returns the full state of the block at the specified position (including properties like rotation, waterlogged, etc.).
+--- @param x number The X coordinate or a blockpos object.
+--- @param y? number The Y coordinate (optional if blockpos is provided).
+--- @param z? number The Z coordinate (optional if blockpos is provided).
 --- @return block
+--- @overload fun(pos: blockpos): block
 function world.getBlockState(x, y, z) end
 
---- Checks whether the chunk has been loaded based on its coordinates
---- @param x number
---- @param y number
---- @param z number
+--- Checks whether the chunk has been loaded based on its coordinatesc.).
+--- @param x number | blockpos The X coordinate or a blockpos object.
+--- @param y? number The Y coordinate (optional if blockpos is provided).
+--- @param z? number The Z coordinate (optional if blockpos is provided).
 --- @return boolean
+--- @overload fun(pos: blockpos): boolean
 function world.isBlockLoaded(x, y, z) end
 
 --- Retrieves an entity by its ID
@@ -59,18 +63,19 @@ function world.getEntitiesInBox(box) end
 function world.getArmorStandEntitiesInBox(box) end
 
 --- Receives a block collision
---- @param x number
---- @param y number
---- @param z number
---- @param block block
+--- @param x number | blockpos The X coordinate or a blockpos object.
+--- @param y? number The Y coordinate (optional if blockpos is provided).
+--- @param z? number The Z coordinate (optional if blockpos is provided).
 --- @return box[]
+--- @overload fun(pos: blockpos, block: block): box[]
 function world.getCollisionBoxes(x, y, z, block) end
 
 --- Gets the block outline
---- @param x number
---- @param y number
---- @param z number
+--- @param x number | blockpos The X coordinate or a blockpos object.
+--- @param y? number The Y coordinate (optional if blockpos is provided).
+--- @param z? number The Z coordinate (optional if blockpos is provided).
 --- @return box[]
+--- @overload fun(pos: blockpos, block: block): box[]
 function world.getOutlineBoxes(x, y, z, block) end
 
 --- @class raycastConfiguration

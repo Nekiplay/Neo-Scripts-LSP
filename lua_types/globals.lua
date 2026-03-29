@@ -52,9 +52,7 @@ function registerClientTickPost(callback) end
 function registerClientTickPre(callback) end
 
 --- @class blockupdate
---- @field x number
---- @field y number
---- @field z number
+--- @field postion blockpos
 --- @field old block?
 --- @field new block?
 
@@ -63,11 +61,11 @@ function registerClientTickPre(callback) end
 function registerBlockUpdate(callback) end
 
 ---Registers a function that is needed for 3D rendering.
----@param callback fun(info: worldRenderer)
+---@param callback fun(ctx: worldRenderer)
 function registerWorldRenderer(callback) end
 
 ---Registers a function that is needed for 2D rendering.
----@param callback fun(info: twoRenderer)
+---@param callback fun(ctx: twoRenderer)
 function register2DRenderer(callback) end
 
 ---Registers a function that is triggered when the keyboard and mouse are pressed.
@@ -91,13 +89,8 @@ function registerSendMessageEvent(callback) end
 ---@param callback fun(command: string)
 function registerSendCommandEvent(callback) end
 
---- @class locationchangeevent
---- @field x number
---- @field y number
---- @field z number
-
 ---Registers a function that is triggered when the player changes location.
----@param callback fun(info: locationchangeevent)
+---@param callback fun(locatio: string)
 function registerLocationChangeEvent(callback) end
 
 ---Registers a function that is triggered when ImGui is being rendered.
@@ -126,22 +119,39 @@ function registerServerSideTeleportEvent(callback) end
 -- ============================================
 
 function unregisterSpawnParticle(callback) end
+
 function unregisterInventoryItemChange(callback) end
+
 function unregisterUseBlock(callback) end
+
 function unregisterAttackBlock(callback) end
+
 function unregisterClientTick(callback) end
+
 function unregisterClientTickPost(callback) end
+
 function unregisterClientTickPre(callback) end
+
 function unregisterBlockUpdate(callback) end
+
 function unregisterWorldRenderer(callback) end
+
 function unregister2DRenderer(callback) end
+
 function unregisterKeyEvent(callback) end
+
 function unregisterMessageEvent(callback) end
+
 function unregisterSendMessageEvent(callback) end
+
 function unregisterSendCommandEvent(callback) end
+
 function unregisterLocationChangeEvent(callback) end
+
 function unregisterImGuiRenderEvent(callback) end
+
 function unregisterServerSideRotationEvent(callback) end
+
 function unregisterServerSideTeleportEvent(callback) end
 
 -- ============================================

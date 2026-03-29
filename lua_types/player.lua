@@ -17,6 +17,19 @@
 --- @field fishHook entity? The nature of a fish taking the bait when the line is cast
 local player = {}
 
+---Get ScoreBoard lines
+--- @return string[]
+function player.getScoreBoardLines() end
+
+--- @class tab
+--- @field header string
+--- @field footer string
+--- @field body string[]
+
+---Get Tab
+--- @return tab
+function player.getTab() end
+
 ---Add local message
 --- @param text string -- message
 --- @return boolean Return true if success
@@ -171,16 +184,6 @@ function player.addToast(title, message, time) end
 --- @param pitch number Player pitch
 --- @return vector3d
 function player.getDirectionFromYawPitch(yaw, pitch) end
-
---- @class raycastResult
---- @field type string block or entity or miss
---- @field data entity? Entity data only for entity type
---- @field x number? X coordinate of the end of the ray only for block type
---- @field y number? Y coordinate of the end of the ray only for block type
---- @field z number? z coordinate of the end of the ray only for block type
---- @field size direction? direction only for block type
---- @field blockPos vector3d? block postion only for block type
-
 
 --- Get player eye postion
 --- @param distance number
