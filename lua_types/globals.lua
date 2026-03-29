@@ -1,5 +1,8 @@
 ---@meta
 
+---@type string
+currentScriptName = nil
+
 ---Registers a function that will be executed when the script is unloaded.
 ---@param callback fun() Callback function (no arguments)
 function registerUnloadCallback(callback) end
