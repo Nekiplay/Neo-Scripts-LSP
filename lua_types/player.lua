@@ -185,7 +185,6 @@ function player.addToast(title, message, time) end
 --- @return vector3d
 function player.getDirectionFromYawPitch(yaw, pitch) end
 
---- Get player eye postion
 --- @param distance number
 --- @return raycastResult
 function player.raycast(distance) end

@@ -88,7 +88,6 @@ function world.getOutlineBoxes(x, y, z, block) end
 --- @field include_fluid boolean? optional (default false)
 --- @field include_entity boolean? optional (default false)
 
---- Gets the block outline
 --- @param configuration raycastConfiguration
 --- @return raycastResult
 function world.raycast(configuration) end
@@ -102,7 +101,6 @@ function world.raycast(configuration) end
 --- @field endZ number
 --- @field blocks number[] optional (default none)
 
---- Gets the block outline
 --- @param configuration raycastConfigurationBlocks
 --- @return raycastResult
 function world.raycastToBlocks(configuration) end
