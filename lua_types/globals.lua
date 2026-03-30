@@ -23,9 +23,7 @@ function registerInventoryItemChange(callback) end
 
 --- @class useblock
 --- @field hand string
---- @field x number
---- @field y number
---- @field z number
+--- @field blockpos blockpos
 
 ---Registers a function that will be executed when a block is used.
 ---@param callback fun(info: useblock)
@@ -33,9 +31,7 @@ function registerUseBlock(callback) end
 
 --- @class attackblock
 --- @field hand string
---- @field x number
---- @field y number
---- @field z number
+--- @field blockpos blockpos
 --- @field direction direction
 
 ---Registers a function that will be executed when a block is attacked.
@@ -163,7 +159,7 @@ function unregisterServerSideTeleportEvent(callback) end
 
 ---Register a custom command.
 ---@param name string Command name
----@param callback fun(args: string) Callback function that receives command arguments as string
+---@param callback fun(commandname: string, args: string[]) Callback function that receives command arguments as string
 function registerCommand(name, callback) end
 
 ---Unregister a custom command.
