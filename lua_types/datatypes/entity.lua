@@ -17,6 +17,10 @@
 --- @field x number Entity position x
 --- @field y number Entity position y
 --- @field z number Entity position z
+--- @field gravity number Entity gravity
+--- @field horizontal_collision boolean Entity is touch horizontal block
+--- @field vertical_collision boolean Entity is touch vertical block
+--- @field controlled_venicle entity? Entity used boat or minecart
 --- @field pos vector3d Entity position
 --- @field position vector3d Entity position
 --- @field box box Entity box
@@ -28,11 +32,14 @@
 --- @field height number Entity height
 --- @field yaw number Entity yaw rotation
 --- @field pitch number Entity pitch rotation
+--- @field age number Entity age time
 --- @field is_on_ground boolean Check entity is on ground
 --- @field is_touching_water boolean Check entity is touching water
 --- @field is_in_lava boolean Check entity is touching lava
 --- @field is_sneaking boolean Check entity is sneaking
 --- @field is_sprinting boolean Check entity is sprinting
+--- @field is_swimming boolean Check entity is swimming
+--- @field is_crouching boolean Check entity is crouching
 --- @field passengers entity[] Drivers
 --- @field distance_to_player number Distance to local player
 --- @field item item? Item for ItemFrames and ItemEntity
