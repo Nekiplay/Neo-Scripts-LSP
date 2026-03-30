@@ -90,13 +90,9 @@ function worldRenderer.renderSphere(x, y, z, radius, segments, rings, red, green
 --- @param green number
 --- @param blue number
 --- @param throughWalls boolean?
---- @param qx number? optional quanterion x
---- @param qy number? optional quanterion y
---- @param qz number? optional quanterion z
---- @param qw number? optional quanterion w
 --- @return boolean
 --- @overload fun(pos: vector3d, text: string, scale: number, red: number, green: number, blue: number, alpha: number, throughWalls: boolean): boolean
-function worldRenderer.renderText(x, y, z, text, scale, red, green, blue, throughWalls, qx, qy, qz, qw) end
+function worldRenderer.renderText(x, y, z, text, scale, red, green, blue, throughWalls) end
 
 --- @param points table
 --- @param red number
