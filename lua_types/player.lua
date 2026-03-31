@@ -164,7 +164,7 @@ function player.isOnSkyBlock() end
 function player.isHasLineOfSight(entity) end
 
 --- Swing player hand
---- @param hand boolean true for swing off hand
+--- @param hand boolean? true for swing off hand
 --- @return boolean
 function player.swingHand(hand) end
 

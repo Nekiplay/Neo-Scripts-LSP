@@ -94,21 +94,12 @@ function registerLocationChangeEvent(callback) end
 ---@param callback fun()
 function registerImGuiRenderEvent(callback) end
 
---- @class rotationsEvent
---- @field yaw number
---- @field pitch number
-
 ---Registers a function that is triggered when server-side rotation is detected.
----@param callback fun(info: rotationsEvent)
+---@param callback fun(yaw: number?, pitch: number?)
 function registerServerSideRotationEvent(callback) end
 
---- @class teleportEvent
---- @field x number
---- @field y number
---- @field z number
-
 ---Registers a function that is triggered when a server-side teleport is detected.
----@param callback fun(info: teleportEvent)
+---@param callback fun(x: number?, y: number?, z: number?)
 function registerServerSideTeleportEvent(callback) end
 
 ---Registers a function that is triggered when a server-side teleport is detected.
