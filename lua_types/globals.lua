@@ -9,9 +9,7 @@ function registerUnloadCallback(callback) end
 
 --- @class particle
 --- @field id number
---- @field x number
---- @field y number
---- @field z number
+--- @field position vector3d
 
 ---Registers a function that will be executed when a particle spawns.
 ---@param callback fun(particle: particle)
@@ -113,45 +111,70 @@ function registerServerSideRotationEvent(callback) end
 ---@param callback fun(info: teleportEvent)
 function registerServerSideTeleportEvent(callback) end
 
+---Registers a function that is triggered when a server-side teleport is detected.
+---@param callback fun(dayTime: number, gameTime: number, tickDayTime: boolean)
+function registerServerSetTimeEvent(callback) end
+
 -- ============================================
 -- UNREGISTER FUNCTIONS
 -- ============================================
 
+--- @param callback function
 function unregisterSpawnParticle(callback) end
 
+--- @param callback function
 function unregisterInventoryItemChange(callback) end
 
+--- @param callback function
 function unregisterUseBlock(callback) end
 
+--- @param callback function
 function unregisterAttackBlock(callback) end
 
+--- @param callback function
 function unregisterClientTick(callback) end
 
+--- @param callback function
 function unregisterClientTickPost(callback) end
 
+--- @param callback function
 function unregisterClientTickPre(callback) end
 
+--- @param callback function
 function unregisterBlockUpdate(callback) end
 
+--- @param callback function
 function unregisterWorldRenderer(callback) end
 
+--- @param callback function
 function unregister2DRenderer(callback) end
 
+--- @param callback function
 function unregisterKeyEvent(callback) end
 
+--- @param callback function
 function unregisterMessageEvent(callback) end
 
+--- @param callback function
 function unregisterSendMessageEvent(callback) end
 
+--- @param callback function
 function unregisterSendCommandEvent(callback) end
 
+--- @param callback function
 function unregisterLocationChangeEvent(callback) end
 
+--- @param callback function
 function unregisterImGuiRenderEvent(callback) end
 
+--- @param callback function
 function unregisterServerSideRotationEvent(callback) end
 
+--- @param callback function
 function unregisterServerSideTeleportEvent(callback) end
+
+--- @param callback function
+function unregisterServerSetTimeEvent(callback) end
 
 -- ============================================
 -- COMMANDS
@@ -161,9 +184,5 @@ function unregisterServerSideTeleportEvent(callback) end
 ---@param name string Command name
 ---@param callback fun(commandname: string, args: string[]) Callback function that receives command arguments as string
 function registerCommand(name, callback) end
-
----Unregister a custom command.
----@param name string Command name
-function unregisterCommand(name) end
 
 globals = {}
