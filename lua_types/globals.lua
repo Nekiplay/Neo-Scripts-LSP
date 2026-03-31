@@ -179,7 +179,7 @@ local completeon = {}
 --- Register a custom command.
 --- @param name string Command name
 --- @param callback fun(commandname: string, args: string[]) Callback function that receives command arguments as string
---- @param completeions fun(info: completeon): table
+--- @param completeions fun(info: completeon)?: table
 function registerCommand(name, callback, completeions) end
 
 globals = {}
