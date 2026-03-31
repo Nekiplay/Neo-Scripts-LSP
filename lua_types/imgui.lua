@@ -178,6 +178,12 @@ function imgui.textDisabled(text) end
 --- @param text string
 function imgui.bulletText(text) end
 
+--- Render bullet point text
+--- @param text string
+--- @return number wighth
+--- @return number height
+function imgui.calcTextSize(text) end
+
 -- ============================================
 -- IMAGES
 -- ============================================
