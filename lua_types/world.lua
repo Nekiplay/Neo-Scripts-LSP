@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class world
-world = {}
+local world = {}
 
 --- Gets yaw and pitch to look exactly at the specified coordinates
 --- @param x number | blockpos The X coordinate or a blockpos object.
@@ -12,25 +12,34 @@ world = {}
 function world.getRotation(x, y, z) end
 
 --- Returns the block type at the specified position.
---- @param x number The X coordinate or a blockpos object.
---- @param y? number The Y coordinate (optional if blockpos is provided).
---- @param z? number The Z coordinate (optional if blockpos is provided).
+--- @param x number The X coordinate
+--- @param y number The Y coordinate
+--- @param z number The Z coordinate
+--- @param id number Block id
+--- @return block?
+--- @overload fun(pos: blockpos, id: number)
+function world.setBlock(x, y, z, id) end
+
+--- Returns the block type at the specified position.
+--- @param x number The X coordinate
+--- @param y number The Y coordinate
+--- @param z number The Z coordinate
 --- @return block?
 --- @overload fun(pos: blockpos): block?
 function world.getBlock(x, y, z) end
 
 --- Returns the full state of the block at the specified position (including properties like rotation, waterlogged, etc.).
---- @param x number The X coordinate or a blockpos object.
---- @param y? number The Y coordinate (optional if blockpos is provided).
---- @param z? number The Z coordinate (optional if blockpos is provided).
+--- @param x number The X coordinate
+--- @param y number The Y coordinate
+--- @param z number The Z coordinate
 --- @return block?
 --- @overload fun(pos: blockpos): block?
 function world.getBlockState(x, y, z) end
 
 --- Checks whether the chunk has been loaded based on its coordinatesc.).
---- @param x number | blockpos The X coordinate or a blockpos object.
---- @param y? number The Y coordinate (optional if blockpos is provided).
---- @param z? number The Z coordinate (optional if blockpos is provided).
+--- @param x number | blockpos The X coordinate
+--- @param y? number The Y coordinate
+--- @param z? number The Z coordinate
 --- @return boolean
 --- @overload fun(pos: blockpos): boolean
 function world.isBlockLoaded(x, y, z) end
