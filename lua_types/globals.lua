@@ -102,9 +102,20 @@ function registerServerSideRotationEvent(callback) end
 ---@param callback fun(x: number?, y: number?, z: number?)
 function registerServerSideTeleportEvent(callback) end
 
----Registers a function that is triggered when a server-side teleport is detected.
+---Registers a function that is triggered when a server send new time.
 ---@param callback fun(dayTime: number, gameTime: number, tickDayTime: boolean)
 function registerServerSetTimeEvent(callback) end
+
+--- @class soundevent
+--- @field name string
+--- @field position vector3d
+--- @field pitch number
+--- @field volume number
+
+
+---Registers a function that is triggered when a server send new sound.
+---@param callback fun(info: soundevent)
+function registerSoundPlay(callback) end
 
 -- ============================================
 -- UNREGISTER FUNCTIONS
