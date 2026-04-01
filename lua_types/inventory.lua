@@ -41,15 +41,23 @@ function inventory.leftClick(slot) end
 
 --- @param slot number
 --- @return boolean status
+function inventory.rightClick(slot) end
+
+--- @param slot number
+--- @return boolean status
+function inventory.shiftLeftClick(slot) end
+
+--- @param slot number
+--- @return boolean status
+function inventory.shiftRightClick(slot) end
+
+--- @param slot number
+--- @return boolean status
 function inventory.middleClick(slot) end
 
 --- @param slot number
 --- @return boolean status
 function inventory.dropAll(slot) end
-
---- @param slot number
---- @return boolean status
-function inventory.rightClick(slot) end
 
 --- @return boolean status
 function inventory.closeScreen() end
