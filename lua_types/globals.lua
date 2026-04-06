@@ -94,6 +94,10 @@ function registerLocationChangeEvent(callback) end
 ---@param callback fun()
 function registerImGuiRenderEvent(callback) end
 
+---Registers a function that is triggered when ImGui is created context.
+---@param callback fun()
+function registerImGuiInitEvent(callback) end
+
 ---Registers a function that is triggered when server-side rotation is detected.
 ---@param callback fun(yaw: number?, pitch: number?)
 function registerServerSideRotationEvent(callback) end
