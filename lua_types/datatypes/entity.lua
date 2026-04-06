@@ -43,8 +43,9 @@
 --- @field passengers entity[] Drivers
 --- @field distance_to_player number Distance to local player
 --- @field item item? Item for ItemFrames and ItemEntity
---- @field health number Entity health
---- @field max_health number Entity maximum health
+--- @field health number? Entity health
+--- @field max_health number? Entity maximum health
+--- @field skin string? Player skin texture
 --- @field main_hand item? Get an item in main hand
 --- @field off_hand item? Get an item in off hand
 --- @field head item? Get an item in head slot
