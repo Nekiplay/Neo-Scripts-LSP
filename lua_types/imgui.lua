@@ -525,8 +525,20 @@ function imgui.popStyleVar(count) end
 -- FONT
 -- ============================================
 
+---@class fontObject
+
+
+--- Create font object
+--- @param path string
+--- @param mergeMode boolean?
+--- @param pixelSnapH boolean?
+--- @param fontSize number
+--- @param customRangesTable number[]?
+--- @return fontObject
+function imgui.createFontObject(path, mergeMode, pixelSnapH, fontSize, customRangesTable) end
+
 --- Push font
---- @param font userdata
+--- @param font fontObject
 function imgui.pushFont(font) end
 
 --- Pop font
