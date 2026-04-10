@@ -53,3 +53,4 @@
 --- @field legs item? Get an item in leggins slot
 --- @field feet item? Get an item in feet slot
 --- @field active_effects effect[]? Get entity potion effects
+--- @field nbt string Get entity nbt

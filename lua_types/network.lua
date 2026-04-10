@@ -3,7 +3,15 @@
 --- @class network
 local network = {}
 
---- @return string[]
+--- @class playerNetwork
+--- @field latency number
+--- @field display_name string?
+--- @field name string?
+--- @field id number?
+--- @field gamemode string?
+--- @field skin_texture string?
+
+--- @return playerNetwork[]
 function network.getPlayersList() end
 
 --- @param x number

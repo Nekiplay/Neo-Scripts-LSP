@@ -23,3 +23,5 @@
 --- @field map map? Data for working with the “Map” subject
 --- @field lore string[] Item lore
 --- @field enchantments enchantments[] Item enchantments
+--- @field hypixel_enchantments enchantments[] Hypixel SkyBlock Item enchantments
+--- @field nbt string Item nbt
