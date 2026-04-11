@@ -75,6 +75,7 @@ function world.getArmorStandEntitiesInBox(box) end
 --- @param x number | blockpos The X coordinate or a blockpos object.
 --- @param y? number The Y coordinate (optional if blockpos is provided).
 --- @param z? number The Z coordinate (optional if blockpos is provided).
+--- @param block block
 --- @return box[]
 --- @overload fun(pos: blockpos, block: block): box[]
 function world.getCollisionBoxes(x, y, z, block) end
@@ -83,6 +84,7 @@ function world.getCollisionBoxes(x, y, z, block) end
 --- @param x number | blockpos The X coordinate or a blockpos object.
 --- @param y? number The Y coordinate (optional if blockpos is provided).
 --- @param z? number The Z coordinate (optional if blockpos is provided).
+--- @param block block
 --- @return box[]
 --- @overload fun(pos: blockpos, block: block): box[]
 function world.getOutlineBoxes(x, y, z, block) end

@@ -189,4 +189,11 @@ function player.getDirectionFromYawPitch(yaw, pitch) end
 --- @return raycastResult
 function player.raycast(distance) end
 
+--- @class breakingResult
+--- @field progress number 0-1
+--- @field blockpos blockpos
+
+--- @return breakingResult
+function player.getBreakingProgress() end
+
 return player
