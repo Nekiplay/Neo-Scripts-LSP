@@ -95,3 +95,10 @@ function input.isPressedAttack() end
 
 --- @return boolean
 function input.isPressedUse() end
+
+--- @class breakingResult
+--- @field progress number 0-1
+--- @field blockpos blockpos
+
+--- @return breakingResult
+function input.getBreakingProgress() end

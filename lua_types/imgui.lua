@@ -163,10 +163,10 @@ function imgui.render() end
 function imgui.text(text) end
 
 --- Render colored text
---- @param r number
---- @param g number
---- @param b number
---- @param a number? optional
+--- @param r number 0-1
+--- @param g number 0-1
+--- @param b number 0-1
+--- @param a number? optional 0-1
 --- @param text string
 function imgui.textColored(r, g, b, a, text) end
 
@@ -725,10 +725,10 @@ function imgui.vSliderInt(label, value, min, max, format, flags) end
 --- @param x number
 --- @param y number
 --- @param text string
---- @param red number? optional
---- @param green number? optional
---- @param blue number? optional
---- @param alpha number? optional
+--- @param red number? optional 0-1
+--- @param green number? optional 0-1
+--- @param blue number? optional 0-1
+--- @param alpha number? optional 0-1
 --- @return boolean
 function imgui.dl.renderText(x, y, text, red, green, blue, alpha) end
 
@@ -750,20 +750,20 @@ function imgui.dl.renderImage(textureID, x, y, width, height, uvMinX, uvMinY, uv
 --- @param y1 number
 --- @param x2 number
 --- @param y2 number
---- @param red number? optional
---- @param green number? optional
---- @param blue number? optional
---- @param alpha number? optional
+--- @param red number? optional 0-1
+--- @param green number? optional 0-1
+--- @param blue number? optional 0-1
+--- @param alpha number? optional 0-1
 --- @param thickness number? optional
 --- @return boolean
 function imgui.dl.renderLine(x1, y1, x2, y2, red, green, blue, alpha, thickness) end
 
 --- Render polygon on draw list
 --- @param points table
---- @param red number? optional
---- @param green number? optional
---- @param blue number? optional
---- @param alpha number? optional
+--- @param red number? optional 0-1
+--- @param green number? optional 0-1
+--- @param blue number? optional 0-1
+--- @param alpha number? optional 0-1
 --- @return boolean
 function imgui.dl.renderPolygon(points, red, green, blue, alpha) end
 
