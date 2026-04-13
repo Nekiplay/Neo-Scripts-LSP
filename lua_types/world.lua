@@ -89,6 +89,15 @@ function world.getCollisionBoxes(x, y, z, block) end
 --- @overload fun(pos: blockpos, block: block): box[]
 function world.getOutlineBoxes(x, y, z, block) end
 
+--- @class breakingBlockInfo
+--- @field progress integer
+--- @field blockpos blockpos
+--- @field id integer
+--- @field updatedRenderTick integer
+
+--- @return breakingBlockInfo[]
+function world.getBreakingBlocksInfo() end
+
 --- @class raycastConfiguration
 --- @field startX number
 --- @field startY number
