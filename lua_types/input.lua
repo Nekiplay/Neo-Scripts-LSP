@@ -23,6 +23,7 @@ function input.attackEntity() end
 
 --- Interact block under crosshair
 --- @return boolean
+--- @overload fun(raycast: raycastResult)
 function input.interactBlock() end
 
 --- Interact entity under crosshair
