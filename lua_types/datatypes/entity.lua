@@ -54,3 +54,4 @@
 --- @field feet item? Get an item in feet slot
 --- @field active_effects effect[]? Get entity potion effects
 --- @field nbt string Get entity nbt
+--- @field blockpos blockpos Get entity block position

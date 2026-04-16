@@ -49,7 +49,7 @@ function registerClientTickPost(callback) end
 function registerClientTickPre(callback) end
 
 --- @class blockupdate
---- @field postion blockpos
+--- @field position blockpos
 --- @field old block?
 --- @field new block?
 
