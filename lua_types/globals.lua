@@ -182,6 +182,9 @@ function unregisterServerSideTeleportEvent(callback) end
 --- @param callback function
 function unregisterServerSetTimeEvent(callback) end
 
+--- @param ... any
+function print(...) end
+
 -- ============================================
 -- COMMANDS
 -- ============================================
