@@ -64,5 +64,3 @@ function inventory.closeScreen() end
 
 --- @return boolean status
 function inventory.openInventory() end
-
-return inventory

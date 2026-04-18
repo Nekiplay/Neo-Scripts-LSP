@@ -11,6 +11,9 @@
 ---
 --- @class player
 --- @field entity entity
+--- @field inventory inventory
+--- @field input input
+--- @field network network
 --- @field fishHook entity? The nature of a fish taking the bait when the line is cast
 local player = {}
 

@@ -107,5 +107,3 @@ function input.getBreakingProgress() end
 --- @param progress number 0-1
 --- @return boolean
 function input.setBreakingProgress(progress) end
-
-return input
