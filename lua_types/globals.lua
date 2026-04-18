@@ -69,14 +69,11 @@ function register2DRenderer(callback) end
 ---@param callback fun(key: number, action: string)
 function registerKeyEvent(callback) end
 
---- @class messageevent
---- @field message string
---- @field sender string
---- @field encrypted boolean
-
 ---Registers a function that is triggered when a chat message is received.
----@param callback fun(info: messageevent)
-function registerMessageEvent(callback) end
+---@param text string
+---@param overlay boolean
+---@param json string
+function registerMessageEvent(text, overlay, json) end
 
 ---Registers a function that is triggered when a message is sent.
 ---@param callback fun(message: string)
