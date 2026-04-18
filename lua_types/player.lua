@@ -11,9 +11,6 @@
 ---
 --- @class player
 --- @field entity entity
---- @field inventory inventory
---- @field input input
---- @field network network
 --- @field fishHook entity? The nature of a fish taking the bait when the line is cast
 local player = {}
 
@@ -40,10 +37,17 @@ function player.addMessage(text) end
 --- @param pitch number
 function player.setRotation(yaw, pitch) end
 
----Set serverside player rotation
+---Set server side player rotation
 --- @param yaw number
 --- @param pitch number
-function player.setSilentRotation(yaw, pitch) end
+--- @param movementCorrection boolean? default true
+function player.setSilentRotation(yaw, pitch, movementCorrection) end
+
+---Set server side player rotation
+--- @param yaw number
+--- @param pitch number
+--- @param movementCorrection boolean? default true
+function player.setSeverRotation(yaw, pitch, movementCorrection) end
 
 --- Send message to server
 --- @param text string -- message
@@ -67,9 +71,13 @@ function player.getPosition() end
 --- @return rotation Player rotation
 function player.getRotation() end
 
---- Get player serverside rotation
+--- Get player server side rotation
 --- @return rotation Player rotation
 function player.getSilentRotation() end
+
+--- Get player server side rotation
+--- @return rotation Player rotation
+function player.getServerRotation() end
 
 --- Check if player has custom serverside rotation
 --- @return boolean

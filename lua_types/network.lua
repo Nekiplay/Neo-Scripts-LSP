@@ -34,3 +34,5 @@ function network.sendStopDestroyBlockPacket(x, y, z, direction) end
 --- @param direction direction
 --- @return boolean
 function network.sendAbortDestroyBlockPacket(x, y, z, direction) end
+
+return network
