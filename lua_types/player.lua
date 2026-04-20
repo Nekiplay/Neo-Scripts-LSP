@@ -44,13 +44,8 @@ function player.setRotation(yaw, pitch) end
 --- @param yaw number
 --- @param pitch number
 --- @param movementCorrection boolean? default true
-function player.setSilentRotation(yaw, pitch, movementCorrection) end
-
----Set server side player rotation
---- @param yaw number
---- @param pitch number
---- @param movementCorrection boolean? default true
-function player.setSeverRotation(yaw, pitch, movementCorrection) end
+--- @param silentMovementCorrection boolean? default false, require movementCorrection true
+function player.setSilentRotation(yaw, pitch, movementCorrection, silentMovementCorrection) end
 
 --- Send message to server
 --- @param text string -- message
@@ -77,10 +72,6 @@ function player.getRotation() end
 --- Get player server side rotation
 --- @return rotation Player rotation
 function player.getSilentRotation() end
-
---- Get player server side rotation
---- @return rotation Player rotation
-function player.getServerRotation() end
 
 --- Check if player has custom serverside rotation
 --- @return boolean
