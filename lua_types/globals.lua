@@ -70,10 +70,8 @@ function register2DRenderer(callback) end
 function registerKeyEvent(callback) end
 
 ---Registers a function that is triggered when a chat message is received.
----@param text string
----@param overlay boolean
----@param json string
-function registerMessageEvent(text, overlay, json) end
+---@param callback fun(text: string, overlay: boolean, json: string)
+function registerMessageEvent(callback) end
 
 ---Registers a function that is triggered when a message is sent.
 ---@param callback fun(message: string)
