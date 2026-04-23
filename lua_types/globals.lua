@@ -116,6 +116,18 @@ function registerServerSetTimeEvent(callback) end
 ---@param callback fun(info: soundevent)
 function registerSoundPlay(callback) end
 
+--- @class slotclickevent
+--- @field containerId integer
+--- @field slotId integer
+--- @field button integer
+--- @field clickType integer
+--- @field stateId integer
+
+
+---Registers a function that is triggered when a server send new sound.
+---@param callback fun(info: slotclickevent)
+function registerSlotClick(callback) end
+
 -- ============================================
 -- UNREGISTER FUNCTIONS
 -- ============================================
@@ -176,6 +188,9 @@ function unregisterServerSideTeleportEvent(callback) end
 
 --- @param callback function
 function unregisterServerSetTimeEvent(callback) end
+
+--- @param callback function
+function unregisterSlotClick(callback) end
 
 --- @param ... any
 function print(...) end
