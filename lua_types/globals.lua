@@ -117,7 +117,7 @@ function registerServerSetTimeEvent(callback) end
 function registerSoundPlay(callback) end
 
 --- @class slotclickevent
---- @field slotId integer
+--- @field slot integer
 --- @field button integer
 --- @field clickType integer
 
