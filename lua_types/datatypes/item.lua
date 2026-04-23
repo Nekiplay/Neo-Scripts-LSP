@@ -6,6 +6,7 @@
 
 --- @class item
 --- @field blockstate block? Block data
+--- @field id number Item id
 --- @field count number Item count
 --- @field max_count number Item maximum count
 --- @field name string Item name
