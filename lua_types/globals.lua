@@ -117,11 +117,9 @@ function registerServerSetTimeEvent(callback) end
 function registerSoundPlay(callback) end
 
 --- @class slotclickevent
---- @field containerId integer
 --- @field slotId integer
 --- @field button integer
 --- @field clickType integer
---- @field stateId integer
 
 
 ---Registers a function that is triggered when a server send new sound.
