@@ -89,6 +89,17 @@ function world.getCollisionBoxes(x, y, z, block) end
 --- @overload fun(pos: blockpos, block: block): box[]
 function world.getOutlineBoxes(x, y, z, block) end
 
+--- Play sound in world
+--- @param x number | blockpos The X coordinate or a blockpos object.
+--- @param y? number The Y coordinate (optional if blockpos is provided).
+--- @param z? number The Z coordinate (optional if blockpos is provided).
+--- @param soudId string
+--- @param volume number
+--- @param pitch number
+--- @return boolean
+--- @overload fun(pos: blockpos, soudId: string, volume: number, pitch: volume): boolean
+function world.playSound(x, y, z, soudId, volume, pitch) end
+
 --- @class breakingBlockInfo
 --- @field progress integer
 --- @field blockpos blockpos

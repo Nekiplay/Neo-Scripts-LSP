@@ -30,6 +30,20 @@ function player.getScoreBoardLines() end
 --- @return tab
 function player.getTab() end
 
+--- @class boosbar
+--- @field uuid string
+--- @field name string
+--- @field percent number 0-1
+--- @field color string
+--- @field overlay string
+--- @field shouldCreateFog boolean
+--- @field shouldDarkenScreen boolean
+--- @field shouldPlayBossMusic boolean
+
+---Get BossBars
+--- @return boosbar[]
+function player.getBossBar() end
+
 ---Add local message
 --- @param text string -- message
 --- @return boolean Return true if success
