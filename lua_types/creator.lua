@@ -25,7 +25,7 @@ function creator.createAABB(minX, minY, minZ, maxX, maxY, maxZ) end
 --- @param y number
 --- @param z number
 --- @return vector3d
-function creator.createVector3d(x, y, z) end
+function creator.createVector3(x, y, z) end
 
 --- @param x integer
 --- @param y integer
