@@ -23,6 +23,16 @@ function inventory.getStackFromContainer(slot) end
 --- @return item?
 function inventory.getStack(slot) end
 
+--- @param slot number
+--- @param item item
+--- @return boolean
+function inventory.setStack(slot, item) end
+
+--- @param slot number
+--- @param item item
+--- @return boolean
+function inventory.setStackInContainer(slot, item) end
+
 --- @param line number
 --- @return string?
 function inventory.getSignText(line) end
