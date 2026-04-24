@@ -6,6 +6,7 @@
 --- @field amplifier number
 
 --- @class entity
+local entity = {}
 --- @field id string Entity id
 --- @field uuid string Entity uuid
 --- @field name string Entity name
@@ -55,3 +56,12 @@
 --- @field active_effects effect[]? Get entity potion effects
 --- @field nbt string Get entity nbt
 --- @field blockpos blockpos Get entity block position
+
+--- Teleport entity to a position work only for local player
+--- @param x number
+--- @param y number
+--- @param z number
+--- @param on_ground boolean
+--- @return boolean status
+--- @overload fun(pos: vector3d, on_ground: boolean): boolean
+function entity.teleport(x, y, z, on_ground) end

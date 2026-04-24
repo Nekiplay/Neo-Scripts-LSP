@@ -12,12 +12,14 @@ local world = {}
 function world.getRotation(x, y, z) end
 
 --- Returns the block type at the specified position.
---- @param x number The X coordinate
---- @param y number The Y coordinate
---- @param z number The Z coordinate
---- @param id number Block id
+--- @param x integer The X coordinate
+--- @param y integer The Y coordinate
+--- @param z integer The Z coordinate
+--- @param id integer Block id
 --- @return block?
 --- @overload fun(pos: blockpos, id: number)
+--- @overload fun(pos: blockpos, block: block)
+--- @overload fun(x: number, y: number, z: number, block: block)
 function world.setBlock(x, y, z, id) end
 
 --- Returns the block type at the specified position.
