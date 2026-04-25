@@ -42,11 +42,11 @@ function creator.createDirection(direction) end
 function creator.createItemStackFromHypixelSkyblockId(id) end
 
 --- @param id integer example 1
---- @return item
+--- @return item?
 function creator.createItemStackId(id) end
 
 --- @param identifier string example minecraft:stone
---- @return item
+--- @return item?
 function creator.createItemStackIdentifier(identifier) end
 
 return creator
