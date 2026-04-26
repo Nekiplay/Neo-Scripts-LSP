@@ -26,3 +26,16 @@
 --- @field enchantments enchantments[] Item enchantments
 --- @field hypixel_enchantments enchantments[] Hypixel SkyBlock Item enchantments
 --- @field nbt string Item nbt
+--- @field is_sword boolean Check if Item is sword
+--- @field is_pickaxe boolean Check if Item is pickaxe
+--- @field is_axe boolean Check if Item is axe
+--- @field is_hoe boolean Check if Item is hoe
+--- @field is_shovel boolean Check if Item is shovel
+--- @field is_map boolean Check if Item is map
+--- @field is_trident boolean Check if Item is trident
+--- @field is_instrument boolean Check if Item is instrument
+--- @field is_shield boolean Check if Item is shield
+--- @field is_shears boolean Check if Item is shears
+--- @field is_mace boolean Check if Item is mace
+--- @field is_fishing_rod boolean Check if Item is fishing rod
+--- @field is_block boolean Check if Item is block
