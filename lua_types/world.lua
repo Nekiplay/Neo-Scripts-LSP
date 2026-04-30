@@ -30,6 +30,38 @@ function world.setBlock(x, y, z, id) end
 --- @overload fun(pos: blockpos): block?
 function world.getBlock(x, y, z) end
 
+--- Returns the block light.
+--- @param x number The X coordinate
+--- @param y number The Y coordinate
+--- @param z number The Z coordinate
+--- @return integer?
+--- @overload fun(pos: blockpos): integer?
+function world.getLighth(x, y, z) end
+
+--- Returns the block light.
+--- @param x number The X coordinate
+--- @param y number The Y coordinate
+--- @param z number The Z coordinate
+--- @return integer?
+--- @overload fun(pos: blockpos): integer?
+function world.getBrightness(x, y, z) end
+
+--- Returns the block sky light.
+--- @param x number The X coordinate
+--- @param y number The Y coordinate
+--- @param z number The Z coordinate
+--- @return integer?
+--- @overload fun(pos: blockpos): integer?
+function world.getLightSky(x, y, z) end
+
+--- Returns the block sky light.
+--- @param x number The X coordinate
+--- @param y number The Y coordinate
+--- @param z number The Z coordinate
+--- @return integer?
+--- @overload fun(pos: blockpos): integer?
+function world.getBrightnessSky(x, y, z) end
+
 --- Returns the full state of the block at the specified position (including properties like rotation, waterlogged, etc.).
 --- @param x number The X coordinate
 --- @param y number The Y coordinate
