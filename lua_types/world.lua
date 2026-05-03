@@ -36,7 +36,7 @@ function world.getBlock(x, y, z) end
 --- @param z number The Z coordinate
 --- @return integer?
 --- @overload fun(pos: blockpos): integer?
-function world.getLighth(x, y, z) end
+function world.getLight(x, y, z) end
 
 --- Returns the block light.
 --- @param x number The X coordinate

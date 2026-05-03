@@ -13,7 +13,7 @@
 --- @field is_alive boolean Check entity health > 0
 --- @field is_child boolean Check entity is child
 --- @field is_baby boolean Check entity is child
---- @field type boolean Entity type like "entity.minecraft.cow"
+--- @field type string Entity type like "entity.minecraft.cow"
 --- @field x number Entity position x
 --- @field y number Entity position y
 --- @field z number Entity position z
