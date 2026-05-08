@@ -9,6 +9,7 @@
 --- @field id string Entity id
 --- @field uuid string Entity uuid
 --- @field name string Entity name
+--- @field identifier string Block translation id like "minecraft:cow"
 --- @field display_name string Entity formatted name
 --- @field is_alive boolean Check entity health > 0
 --- @field is_child boolean Check entity is child

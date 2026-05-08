@@ -7,6 +7,8 @@
 --- @class item
 --- @field blockstate block? Block data
 --- @field id integer Item id
+--- @field identifier string Block translation id like "minecraft:lever"
+--- @field tranlation_id string Block translation id like "item.minecraft.lever"
 --- @field count number Item count
 --- @field max_count number Item maximum count
 --- @field name string Item name
@@ -39,3 +41,8 @@
 --- @field is_mace boolean Check if Item is mace
 --- @field is_fishing_rod boolean Check if Item is fishing rod
 --- @field is_block boolean Check if Item is block
+local item = {}
+
+--- @param block block
+--- @return boolean
+function item.is_correct_tool(block) end

@@ -2,7 +2,9 @@
 
 --- @class block
 --- @field id number Block id
---- @field name string Block name like "block.minecraft.lever"
+--- @field name string Block name
+--- @field tranlation_id string Block translation id like "block.minecraft.lever"
+--- @field identifier string Block translation id like "minecraft:lever"
 --- @field type string Block type
 --- @field hardness number
 --- @field blast_resistance number
