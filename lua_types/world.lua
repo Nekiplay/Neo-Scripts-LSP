@@ -157,7 +157,7 @@ function world.getBreakingBlocksInfo() end
 --- @return raycastResult
 function world.raycast(configuration) end
 
---- @class raycastConfigurationBlocks
+--- @class raycastConfigurationBlocksFromId
 --- @field startX number
 --- @field startY number
 --- @field startZ number
@@ -166,8 +166,21 @@ function world.raycast(configuration) end
 --- @field endZ number
 --- @field blocks number[] optional (default none)
 
---- @param configuration raycastConfigurationBlocks
+--- @param configuration raycastConfigurationBlocksFromId
 --- @return raycastResult
-function world.raycastToBlocks(configuration) end
+function world.raycastToBlocksFromId(configuration) end
+
+--- @class raycastConfigurationBlocksFromIdentifier
+--- @field startX number
+--- @field startY number
+--- @field startZ number
+--- @field endX number
+--- @field endY number
+--- @field endZ number
+--- @field blocks string[] optional (default none)
+
+--- @param configuration raycastConfigurationBlocksFromIdentifier
+--- @return raycastResult
+function world.raycastToBlocksFromIdentifier(configuration) end
 
 return world
