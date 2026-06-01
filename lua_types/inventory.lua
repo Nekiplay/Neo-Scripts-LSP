@@ -9,6 +9,12 @@ function inventory.isSignOpened() end
 --- @return boolean
 function inventory.isAnyScreenOpened() end
 
+--- @return boolean
+function inventory.isContainerScreenOpened() end
+
+--- @return boolean
+function inventory.isChatOpened() end
+
 --- @return number
 function inventory.getContainerSlots() end
 

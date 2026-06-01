@@ -3,6 +3,23 @@
 ---@class http
 http = {}
 
+--- @class server
+local server = {}
+function server.stop() end
+
+--- @class callback
+--- @field method string
+--- @field path string
+--- @field headers string[]
+--- @field body string
+
+--- Start http server
+--- @param host string
+--- @param port number
+--- @param callback function()
+--- @return server
+function http.create_server(host, port, callback) end
+
 --- Synchronous GET request
 ---@param url string
 ---@param timeout number?

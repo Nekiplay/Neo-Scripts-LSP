@@ -109,3 +109,8 @@ function box.offset(x, y, z) end
 --- @param inflate vector3d
 --- @return box
 function box.offset(inflate) end
+
+--- @param vec vector3d
+--- @overload fun(x: number, y: number, z: number): number
+--- @return number
+function box.distanceToSqr(vec) end

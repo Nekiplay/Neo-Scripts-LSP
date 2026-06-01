@@ -8,7 +8,7 @@
     "checkThirdParty": false
   },
   "diagnostics": {
-    "globals": ["globals", "luajava"],
+    "globals": ["events", "luajava"],
     "disable": ["lowercase-global"]
   },
   "hint": {
