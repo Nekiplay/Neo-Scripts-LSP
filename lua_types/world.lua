@@ -8,6 +8,7 @@ local world = {}
 --- @param y? number The Y coordinate (optional if blockpos is provided).
 --- @param z? number The Z coordinate (optional if blockpos is provided).
 --- @overload fun(pos: blockpos): rotation
+--- @overload fun(pos: mutableblockpos): rotation
 --- @return rotation
 function world.getRotation(x, y, z) end
 
@@ -19,6 +20,8 @@ function world.getRotation(x, y, z) end
 --- @return block?
 --- @overload fun(pos: blockpos, id: number)
 --- @overload fun(pos: blockpos, block: block)
+--- @overload fun(pos: mutableblockpos, id: number)
+--- @overload fun(pos: mutableblockpos, block: block)
 --- @overload fun(x: number, y: number, z: number, block: block)
 function world.setBlock(x, y, z, id) end
 
@@ -36,6 +39,7 @@ function world.getBlock(x, y, z) end
 --- @param z number The Z coordinate
 --- @return integer?
 --- @overload fun(pos: blockpos): integer?
+--- @overload fun(pos: mutableblockpos): integer?
 function world.getLight(x, y, z) end
 
 --- Returns the block light.
@@ -44,6 +48,7 @@ function world.getLight(x, y, z) end
 --- @param z number The Z coordinate
 --- @return integer?
 --- @overload fun(pos: blockpos): integer?
+--- @overload fun(pos: mutableblockpos): integer?
 function world.getBrightness(x, y, z) end
 
 --- Returns the block sky light.
@@ -52,6 +57,7 @@ function world.getBrightness(x, y, z) end
 --- @param z number The Z coordinate
 --- @return integer?
 --- @overload fun(pos: blockpos): integer?
+--- @overload fun(pos: mutableblockpos): integer?
 function world.getLightSky(x, y, z) end
 
 --- Returns the block sky light.
@@ -60,6 +66,7 @@ function world.getLightSky(x, y, z) end
 --- @param z number The Z coordinate
 --- @return integer?
 --- @overload fun(pos: blockpos): integer?
+--- @overload fun(pos: mutableblockpos): integer?
 function world.getBrightnessSky(x, y, z) end
 
 --- Returns the full state of the block at the specified position (including properties like rotation, waterlogged, etc.).
@@ -68,6 +75,7 @@ function world.getBrightnessSky(x, y, z) end
 --- @param z number The Z coordinate
 --- @return block?
 --- @overload fun(pos: blockpos): block?
+--- @overload fun(pos: mutableblockpos): block?
 function world.getBlockState(x, y, z) end
 
 --- Checks whether the chunk has been loaded based on its coordinatesc.).
@@ -76,6 +84,7 @@ function world.getBlockState(x, y, z) end
 --- @param z? number The Z coordinate
 --- @return boolean
 --- @overload fun(pos: blockpos): boolean
+--- @overload fun(pos: mutableblockpos): boolean
 function world.isBlockLoaded(x, y, z) end
 
 --- Retrieves an entity by its ID

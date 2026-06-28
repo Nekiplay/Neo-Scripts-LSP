@@ -33,20 +33,15 @@ function creator.createVector3(x, y, z) end
 --- @return blockpos
 function creator.createBlockPos(x, y, z) end
 
+--- @param x integer
+--- @param y integer
+--- @param z integer
+--- @return mutableblockpos
+--- @overload fun(): mutableblockpos
+function creator.createMutableBlockPos(x, y, z) end
+
 --- @param direction string north or west or other
 --- @return direction
 function creator.createDirection(direction) end
-
---- @param id string example HYPERION
---- @return item
-function creator.createItemStackFromHypixelSkyblockId(id) end
-
---- @param id integer example 1
---- @return item?
-function creator.createItemStackId(id) end
-
---- @param identifier string example minecraft:stone
---- @return item?
-function creator.createItemStackIdentifier(identifier) end
 
 return creator
