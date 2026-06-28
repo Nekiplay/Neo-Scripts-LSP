@@ -192,4 +192,13 @@ function world.raycastToBlocksFromId(configuration) end
 --- @return raycastResult
 function world.raycastToBlocksFromIdentifier(configuration) end
 
+--- @class blockresults
+--- @field pos blockpos
+--- @field state block
+
+--- @param box box
+--- @return blockresults[]
+--- @overload fun(min: blockpos, max: blockpos): blockresults[]
+function world.getBlockIsBox(box) end
+
 return world
