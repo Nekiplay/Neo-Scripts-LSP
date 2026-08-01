@@ -95,11 +95,6 @@ function registerSendMessageEvent(callback) end
 --- @return boolean
 function registerSendCommandEvent(callback) end
 
----Registers a function that is triggered when the player changes location.
---- @param callback fun(locatio: string)
---- @return boolean
-function registerLocationChangeEvent(callback) end
-
 ---Registers a function that is triggered when ImGui is being rendered.
 --- @param callback fun()
 --- @return boolean
