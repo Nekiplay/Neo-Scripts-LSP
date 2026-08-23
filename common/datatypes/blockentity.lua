@@ -1,0 +1,32 @@
+--- @meta
+
+---Block entity object. Returned by serverworld.getBlockEntity() and passed in break block events.
+---Container slots can be read and written by index: be[1] = item, be[1] = nil clears the slot.
+--- @class blockentity
+--- @field blockstate block Block state of the block entity
+--- @field block block Alias for blockstate
+--- @field x integer Block position X
+--- @field y integer Block position Y
+--- @field z integer Block position Z
+--- @field pos blockpos Block position
+--- @field identifier string Registered name like "minecraft:furnace"
+--- @field type string Alias for identifier
+--- @field entity_type string Alias for identifier
+--- @field is_container boolean Check if block entity has an inventory
+--- @field has_inventory boolean Alias for is_container
+--- @field size integer? Container slot count (nil if not a container)
+--- @field inventory item[]? Container items array, empty slots are nil (writable: assign a table to replace slots)
+--- @field is_lit boolean Furnace-like entity is burning. Falls back to the "lit" block state property
+--- @field lit boolean Alias for is_lit (writable for furnaces)
+--- @field is_burning boolean Alias for is_lit
+--- @field burn_time integer? Remaining fuel burn time in ticks (writable)
+--- @field burntime integer Alias for burn_time
+--- @field fuel integer Alias for burn_time
+--- @field burn_duration integer? Total duration of the current fuel in ticks (writable)
+--- @field burn_duration_total integer Alias for burn_duration
+--- @field fuel_duration integer Alias for burn_duration
+--- @field cook_time integer? Current cooking progress in ticks (writable)
+--- @field cooking_progress integer Alias for cook_time
+--- @field cook_total_time integer? Total cooking time in ticks (writable)
+--- @field cook_time_total integer Alias for cook_total_time
+--- @field cooking_total_time integer Alias for cook_total_time
