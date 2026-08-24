@@ -135,6 +135,21 @@ function serverworld.spawnEntity(type, pos, yaw, pitch) end
 --- @overload fun(type: string | entitytype, x: number, y: number, z: number, yaw: number, pitch: number): entity?
 function serverworld.spawn(type, pos, yaw, pitch) end
 
+---Removes an entity from the world without drops or death animation.
+--- @param entity entity|number Entity object or numeric entity ID
+--- @return boolean success True if the entity was removed
+function serverworld.removeEntity(entity) end
+
+---Alias for removeEntity
+--- @param entity entity|number Entity object or numeric entity ID
+--- @return boolean success True if the entity was removed
+function serverworld.despawnEntity(entity) end
+
+---Alias for removeEntity
+--- @param entity entity|number Entity object or numeric entity ID
+--- @return boolean success True if the entity was removed
+function serverworld.despawn(entity) end
+
 ---Receives the collision boxes of a block.
 --- @param x number The X coordinate
 --- @param y number The Y coordinate
