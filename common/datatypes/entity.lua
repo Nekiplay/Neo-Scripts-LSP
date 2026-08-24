@@ -68,6 +68,15 @@
 --- @field right_arm_pose rotation3? ArmorStand right arm pose rotations in degrees (ArmorStand only)
 --- @field left_leg_pose rotation3? ArmorStand left leg pose rotations in degrees (ArmorStand only)
 --- @field right_leg_pose rotation3? ArmorStand right leg pose rotations in degrees (ArmorStand only)
+--- @field text string? TextDisplay formatted text (writable via string or component, TextDisplay only)
+--- @field line_width integer? TextDisplay maximum line width in pixels (writable, TextDisplay only)
+--- @field text_opacity integer? TextDisplay text opacity 0-255 (writable, TextDisplay only)
+--- @field background_color integer? TextDisplay ARGB background color (writable, TextDisplay only)
+--- @field display_item item? ItemDisplay displayed item stack (writable, ItemDisplay only)
+--- @field displayed_item item? Alias for display_item
+--- @field interaction_width number? Interaction hitbox width, min 0 (writable, Interaction only)
+--- @field interaction_height number? Interaction hitbox height, min 0 (writable, Interaction only)
+--- @field response boolean? Interaction signals a successful interaction when true (writable, Interaction only)
 --- @field nbt string Get entity nbt
 --- @field blockpos blockpos Get entity block position
 local entity = {}
