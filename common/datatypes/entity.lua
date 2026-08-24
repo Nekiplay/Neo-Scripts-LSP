@@ -77,6 +77,20 @@
 --- @field interaction_width number? Interaction hitbox width, min 0 (writable, Interaction only)
 --- @field interaction_height number? Interaction hitbox height, min 0 (writable, Interaction only)
 --- @field response boolean? Interaction signals a successful interaction when true (writable, Interaction only)
+--- @field display_block block? BlockDisplay displayed block state (writable, BlockDisplay only)
+--- @field displayed_block block? Alias for display_block
+--- @field billboard string? Display billboard mode (writable, Display only). Values:
+---   - "fixed": no rotation, keeps its original orientation (default)
+---   - "vertical": turns left/right to face the player
+---   - "horizontal": tilts up/down to face the player
+---   - "center": always fully faces the player's view
+--- @field billboard_mode string? Alias for billboard
+--- @field view_range number? Display visibility distance multiplier, min 0 (writable, Display only)
+--- @field shadow_radius number? Display shadow radius, min 0 (writable, Display only)
+--- @field shadow_strength number? Display shadow strength 0-1 (writable, Display only)
+--- @field brightness_override integer? Display packed light override, -1 disables (writable, Display only)
+--- @field transformation transform? Display translation/scale/rotation (writable via transform or raw Transformation userdata, Display only)
+--- @field transform transform? Alias for transformation
 --- @field nbt string Get entity nbt
 --- @field blockpos blockpos Get entity block position
 local entity = {}

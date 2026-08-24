@@ -76,4 +76,34 @@ function creator.createEntity(identifier) end
 --- @return entitytype?
 function creator.createEntityType(identifier) end
 
+---Creates a transform for display entities (text_display, item_display, block_display).
+---All parameters are optional - without arguments an identity transform is created.
+---Assign the result to entity.transformation to apply.
+--- @param tx number? Translation X offset
+--- @param ty number? Translation Y offset
+--- @param tz number? Translation Z offset
+--- @param sx number? Scale X
+--- @param sy number? Scale Y
+--- @param sz number? Scale Z
+--- @param rx number? Rotation X in degrees
+--- @param ry number? Rotation Y in degrees
+--- @param rz number? Rotation Z in degrees
+--- @return transform
+--- @overload fun(): transform
+function creator.createTransform(tx, ty, tz, sx, sy, sz, rx, ry, rz) end
+
+---Alias for createTransform
+--- @param tx number? Translation X offset
+--- @param ty number? Translation Y offset
+--- @param tz number? Translation Z offset
+--- @param sx number? Scale X
+--- @param sy number? Scale Y
+--- @param sz number? Scale Z
+--- @param rx number? Rotation X in degrees
+--- @param ry number? Rotation Y in degrees
+--- @param rz number? Rotation Z in degrees
+--- @return transform
+--- @overload fun(): transform
+function creator.createTransformation(tx, ty, tz, sx, sy, sz, rx, ry, rz) end
+
 return creator
