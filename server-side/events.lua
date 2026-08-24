@@ -49,6 +49,16 @@ function registerServerWorldTickPre(callback) end
 --- @return boolean
 function registerServerWorldTickPost(callback) end
 
+-- ============================================
+-- SERVER LIFECYCLE EVENTS
+-- ============================================
+
+---Registers a function that is called when the server (or world) is shutting down,
+---while all worlds are still loaded and accessible. Called once per loaded world.
+--- @param callback fun(world: serverworld) Callback function
+--- @return boolean
+function registerServerStoppingCallback(callback) end
+
 --- @param callback function
 --- @return boolean
 function unregisterServerTick(callback) end
@@ -72,6 +82,10 @@ function unregisterServerWorldTickPre(callback) end
 --- @param callback function
 --- @return boolean
 function unregisterServerWorldTickPost(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterServerStoppingCallback(callback) end
 
 -- ============================================
 -- INTERACTION EVENTS
