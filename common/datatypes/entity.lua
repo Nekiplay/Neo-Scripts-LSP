@@ -72,6 +72,13 @@
 --- @field line_width integer? TextDisplay maximum line width in pixels (writable, TextDisplay only)
 --- @field text_opacity integer? TextDisplay text opacity 0-255 (writable, TextDisplay only)
 --- @field background_color integer? TextDisplay ARGB background color (writable, TextDisplay only)
+--- @field text_shadow boolean? TextDisplay text drop shadow (writable, TextDisplay only)
+--- @field has_text_shadow boolean? Alias for text_shadow
+--- @field see_through boolean? TextDisplay visible through blocks when true (writable, TextDisplay only)
+--- @field use_default_background boolean? Use the default background color instead of background_color (writable, TextDisplay only)
+--- @field default_background boolean? Alias for use_default_background
+--- @field text_align string? Text alignment: "left", "center" or "right" (writable, TextDisplay only)
+--- @field text_alignment string? Alias for text_align
 --- @field display_item item? ItemDisplay displayed item stack (writable, ItemDisplay only)
 --- @field displayed_item item? Alias for display_item
 --- @field interaction_width number? Interaction hitbox width, min 0 (writable, Interaction only)
