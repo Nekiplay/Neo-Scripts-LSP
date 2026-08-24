@@ -15,7 +15,7 @@
 --- @field is_container boolean Check if block entity has an inventory
 --- @field has_inventory boolean Alias for is_container
 --- @field size integer? Container slot count (nil if not a container)
---- @field inventory item[]? Container items array, empty slots are nil (writable: assign a table to replace slots)
+--- @field inventory container? Container inventory object with give_item/take_item/set_item/get_items and slot indexing
 --- @field is_lit boolean Furnace-like entity is burning. Falls back to the "lit" block state property
 --- @field lit boolean Alias for is_lit (writable for furnaces)
 --- @field is_burning boolean Alias for is_lit

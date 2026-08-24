@@ -54,9 +54,22 @@
 --- @field legs item? Get an item in leggins slot
 --- @field feet item? Get an item in feet slot
 --- @field active_effects effect[]? Get entity potion effects
+--- @field inventory container? Player inventory (Player entities only)
 --- @field nbt string Get entity nbt
 --- @field blockpos blockpos Get entity block position
 local entity = {}
+
+--- Add a potion effect to the entity (LivingEntity only)
+--- @param id string Effect identifier like "minecraft:speed", namespace can be omitted
+--- @param duration integer? Duration in ticks, -1 for infinite (default -1)
+--- @param amplifier integer? Amplifier level (default 0)
+--- @return boolean applied
+function entity.add_effect(id, duration, amplifier) end
+
+--- Remove a potion effect from the entity, or all effects if id is omitted (LivingEntity only)
+--- @param id string? Effect identifier to remove
+--- @return boolean success
+function entity.remove_effect(id) end
 
 --- Teleport entity to a position work only for local player
 --- @param x number
