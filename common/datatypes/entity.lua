@@ -41,7 +41,7 @@
 --- @field is_sprinting boolean Check entity is sprinting
 --- @field is_swimming boolean Check entity is swimming
 --- @field is_crouching boolean Check entity is crouching
---- @field passengers entity[] Drivers
+--- @field passengers entity[] Riding entities (writable: assign a table of entities to replace all passengers)
 --- @field distance_to_player number Distance to local player
 --- @field item item? Item for ItemFrames and ItemEntity
 --- @field health number? Entity health
@@ -113,6 +113,16 @@ function entity.add_effect(id, duration, amplifier) end
 --- @param id string? Effect identifier to remove
 --- @return boolean success
 function entity.remove_effect(id) end
+
+--- Makes the given entity ride on this entity. The passenger automatically dismounts from its current vehicle first.
+--- @param passenger entity Entity to seat on this entity
+--- @return boolean success
+function entity.add_passenger(passenger) end
+
+--- Dismounts the given passenger from this entity.
+--- @param passenger entity Must currently be a passenger of this entity
+--- @return boolean success False if the entity is not a passenger
+function entity.remove_passenger(passenger) end
 
 --- Teleport entity to a position work only for local player
 --- @param x number
