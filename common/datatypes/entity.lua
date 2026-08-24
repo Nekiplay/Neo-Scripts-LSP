@@ -55,6 +55,19 @@
 --- @field feet item? Get an item in feet slot
 --- @field active_effects effect[]? Get entity potion effects
 --- @field inventory container? Player inventory (Player entities only)
+--- @field is_invisible boolean Entity invisibility state (writable)
+--- @field invisible boolean Alias for is_invisible (writable)
+--- @field small boolean? ArmorStand small model (writable, ArmorStand only)
+--- @field marker boolean? ArmorStand marker mode: no hitbox and no interaction (writable, ArmorStand only)
+--- @field show_arms boolean? ArmorStand arms visibility (writable, ArmorStand only)
+--- @field no_base_plate boolean? ArmorStand base plate visibility (writable, ArmorStand only)
+--- @field no_baseplate boolean? Alias for no_base_plate
+--- @field head_pose rotation3? ArmorStand head pose rotations in degrees {x,y,z} (writable via table or vector3d, ArmorStand only)
+--- @field body_pose rotation3? ArmorStand body pose rotations in degrees (ArmorStand only)
+--- @field left_arm_pose rotation3? ArmorStand left arm pose rotations in degrees (ArmorStand only)
+--- @field right_arm_pose rotation3? ArmorStand right arm pose rotations in degrees (ArmorStand only)
+--- @field left_leg_pose rotation3? ArmorStand left leg pose rotations in degrees (ArmorStand only)
+--- @field right_leg_pose rotation3? ArmorStand right leg pose rotations in degrees (ArmorStand only)
 --- @field nbt string Get entity nbt
 --- @field blockpos blockpos Get entity block position
 local entity = {}
@@ -79,3 +92,8 @@ function entity.remove_effect(id) end
 --- @return boolean status
 --- @overload fun(pos: vector3d, on_ground: boolean): boolean
 function entity.teleport(x, y, z, on_ground) end
+
+--- @class rotation3
+--- @field x number Rotation X in degrees
+--- @field y number Rotation Y in degrees
+--- @field z number Rotation Z in degrees
