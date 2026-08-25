@@ -4,6 +4,7 @@
 --- @field id number Block id
 --- @field name string Block name
 --- @field tranlation_id string Block translation id like "block.minecraft.lever"
+--- @field translation_id string Alias for tranlation_id
 --- @field identifier string Block translation id like "minecraft:lever"
 --- @field type string Block type
 --- @field hardness number
@@ -11,14 +12,16 @@
 --- @field is_solid boolean
 --- @field is_liquid boolean
 --- @field is_air boolean
---- @field age number? Crop age (only for crop blocks)
---- @field delay number? Repeater delay (only for repeaters)
---- @field locked boolean? Check if repeater locked (only for repeaters)
---- @field power number? Redstone wire power (only for redstone blocks)
---- @field facing direction? Block direction (only for directional blocks)
---- @field face string? Block face (only for walled blocks)
---- @field lit boolean? Check if redstone torch lit (only for redstone torch)
---- @field mode string? Comporator mode (only for comporator)
---- @field extended boolean? Check if piston extended (only for pistons)
---- @field layers number? Get count snow layers (only for snow layer)
+--- @field age integer? Crop age (writable, only for crop blocks)
+--- @field delay integer? Repeater delay 1-4 (writable, only for repeaters)
+--- @field locked boolean? Check if repeater locked (writable, only for repeaters)
+--- @field power integer? Redstone wire power 0-15 (writable, only for redstone wires)
+--- @field facing direction? Block direction (writable via direction or string, only for directional blocks)
+--- @field face string? Attach face "floor", "wall" or "ceiling" (writable, only for walled blocks like torches/levers)
+--- @field lit boolean? Check if redstone torch lit (writable, only for redstone torches)
+--- @field mode string? Comporator mode "compare"/"subtract" (read only, only for comparators)
+--- @field extended boolean? Check if piston extended (writable, only for pistons)
+--- @field layers integer? Get count snow layers (writable 1-8, only for snow layers)
 --- @field is_still boolean? Check if block water logged (only for water and water logged blocks)
+--- @field properties block_properties All block state properties (readable and writable by property name)
+local block = {}

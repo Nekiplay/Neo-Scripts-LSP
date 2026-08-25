@@ -153,6 +153,48 @@ function registerTitleEvent(callback) end
 --- @return boolean
 function registerActionBarEvent(callback) end
 
+---Called when the script is invoked through the /lua command (load or toggle).
+--- @class lua_invoke_info
+--- @field command string "load" or "toggle"
+--- @field was_loaded boolean Whether the script was already loaded
+--- @field executor string Name of the player that ran the command
+
+---Registers a function that is called when the script is invoked through /lua.
+--- @param callback fun(info: lua_invoke_info) Callback function
+--- @return boolean
+function registerLuaInvokeCallback(callback) end
+
+---Called when the client sends a movement packet. Return false to cancel.
+--- @class player_send_movement_event
+--- @field has_position boolean Whether the packet contains position data
+--- @field x number? Target x position
+--- @field y number? Target y position
+--- @field z number? Target z position
+--- @field has_rotation boolean Whether the packet contains rotation data
+--- @field yaw number? Yaw rotation
+--- @field pitch number? Pitch rotation
+--- @field on_ground boolean On ground flag
+
+---Registers a function that is triggered when a movement packet is sent.
+--- @param callback fun(info: player_send_movement_event): boolean Return false to cancel
+--- @return boolean
+function registerPlayerSendMovementEvent(callback) end
+
+---Registers a function that is triggered when a chunk is loaded. Return false to cancel.
+--- @param callback fun(chunk: levelchunk): boolean Callback function
+--- @return boolean
+function registerChunkLoadEvent(callback) end
+
+---Registers a function that is triggered when a chunk is unloaded.
+--- @param callback fun(chunk: levelchunk): boolean Callback function
+--- @return boolean
+function registerChunkUnLoadEvent(callback) end
+
+---Registers a function that is triggered when the level (world/server) changes.
+--- @param callback fun() Callback function (no arguments)
+--- @return boolean
+function registerLevelChangeEvent(callback) end
+
 -- ============================================
 -- UNREGISTER FUNCTIONS
 -- ============================================
@@ -215,7 +257,23 @@ function unregisterSendCommandEvent(callback) end
 
 --- @param callback function
 --- @return boolean
-function unregisterLocationChangeEvent(callback) end
+function unregisterLuaInvokeCallback(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterPlayerSendMovementEvent(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterChunkLoadEvent(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterChunkUnLoadEvent(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterLevelChangeEvent(callback) end
 
 --- @param callback function
 --- @return boolean

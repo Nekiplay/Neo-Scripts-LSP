@@ -87,6 +87,41 @@ function unregisterServerWorldTickPost(callback) end
 --- @return boolean
 function unregisterServerStoppingCallback(callback) end
 
+---Registers a function that is called once after the server is fully loaded,
+---on the first tick (after autoloaded scripts are executed).
+--- @param callback fun() Callback function (no arguments)
+--- @return boolean
+function registerServerStartedCallback(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterServerStartedCallback(callback) end
+
+---Registers a function that is called when a world (dimension) is fully loaded.
+---On server start it is called for each dimension after the ServerStarted event.
+--- @param callback fun(world: serverworld) Callback function
+--- @return boolean
+function registerWorldLoadedCallback(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterWorldLoadedCallback(callback) end
+
+---Called when the script is invoked through the /slua command (load or toggle).
+--- @class slua_invoke_info
+--- @field command string "load" or "toggle"
+--- @field was_loaded boolean Whether the script was already loaded
+--- @field executor string Name of the player/console that ran the command
+
+---Registers a function that is called when the script is invoked through /slua.
+--- @param callback fun(info: slua_invoke_info) Callback function
+--- @return boolean
+function registerSluaInvokeCallback(callback) end
+
+--- @param callback function
+--- @return boolean
+function unregisterSluaInvokeCallback(callback) end
+
 -- ============================================
 -- INTERACTION EVENTS
 -- ============================================

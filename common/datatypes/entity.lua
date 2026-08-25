@@ -24,16 +24,26 @@
 --- @field controlled_venicle entity? Entity used boat or minecart
 --- @field pos vector3d Entity position
 --- @field position vector3d Entity position
+--- @field blockpos blockpos Get entity block position
 --- @field box box Entity box
---- @field velocity_x number Entity x velocity
---- @field velocity_y number Entity y velocity
---- @field velocity_z number Entity z velocity
---- @field velocity vector3d Entity velocity
+--- @field velocity_x number Entity x velocity (writable)
+--- @field velocity_y number Entity y velocity (writable)
+--- @field velocity_z number Entity z velocity (writable)
+--- @field velocity vector3d Entity velocity (writable)
 --- @field width number Entity width
 --- @field height number Entity height
---- @field yaw number Entity yaw rotation
---- @field pitch number Entity pitch rotation
+--- @field yaw number Entity yaw rotation (writable)
+--- @field pitch number Entity pitch rotation (writable)
 --- @field age number Entity age time
+--- @field direction direction Entity current facing direction
+--- @field nearest_view_direction direction Closest axis-aligned view direction
+--- @field touching_unloaded_chunk boolean Check entity touches an unloaded chunk
+--- @field hurt_marked boolean Entity motion resync flag
+--- @field custom_name string? Custom name text (writable via string or component, nil removes it)
+--- @field custom_name_visible boolean? Always show custom name (writable)
+--- @field no_gravity boolean? Disable gravity (writable)
+--- @field invulnerable boolean? Invulnerability state (writable)
+--- @field glowing boolean? Glowing outline state (writable)
 --- @field is_on_ground boolean Check entity is on ground
 --- @field is_touching_water boolean Check entity is touching water
 --- @field is_in_lava boolean Check entity is touching lava
@@ -47,6 +57,8 @@
 --- @field health number? Entity health
 --- @field max_health number? Entity maximum health
 --- @field skin string? Player skin texture
+--- @field gamemode string? Player gamemode like "survival" (Player entities only)
+--- @field is_blocking boolean? Check entity is blocking with a shield (LivingEntity only)
 --- @field main_hand item? Get an item in main hand
 --- @field off_hand item? Get an item in off hand
 --- @field head item? Get an item in head slot
@@ -55,6 +67,7 @@
 --- @field feet item? Get an item in feet slot
 --- @field active_effects effect[]? Get entity potion effects
 --- @field inventory container? Player inventory (Player entities only)
+--- @field scoreboard scoreboard? Player level scoreboard (Player entities only)
 --- @field is_invisible boolean Entity invisibility state (writable)
 --- @field invisible boolean Alias for is_invisible (writable)
 --- @field small boolean? ArmorStand small model (writable, ArmorStand only)
@@ -99,7 +112,6 @@
 --- @field transformation transform? Display translation/scale/rotation (writable via transform or raw Transformation userdata, Display only)
 --- @field transform transform? Alias for transformation
 --- @field nbt string Get entity nbt
---- @field blockpos blockpos Get entity block position
 local entity = {}
 
 --- Add a potion effect to the entity (LivingEntity only)

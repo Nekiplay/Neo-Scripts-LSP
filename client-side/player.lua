@@ -21,6 +21,10 @@ local player = {}
 --- @return string[]
 function player.getScoreBoardLines() end
 
+---Get the level Scoreboard object (local changes, visible only to this player)
+--- @return scoreboard
+function player.getScoreboard() end
+
 --- @class tab
 --- @field header string
 --- @field footer string
