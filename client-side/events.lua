@@ -195,6 +195,19 @@ function registerChunkUnLoadEvent(callback) end
 --- @return boolean
 function registerLevelChangeEvent(callback) end
 
+---Custom packets server -> client (payload neoscripts:lua_packet, dispatched by server LuaEvents). Use packets lib to send.
+---Aliases: registerCustomPacket, onPacket, registerClientPacket, registerServerPacket
+---Exact channel: callback receives decoded JSON as Lua value (number|string|boolean|table). Wildcard "*" receives (channel, data).
+---Examples: `registerPacket("balance", function(data) print(data.value) end)` / `packets.sendToServer("balance", 10)`
+---@param channel string packet name, e.g. "balance" or "*" for all channels
+---@param callback fun(data:any)|fun(channel:string, data:any) Callback
+---@return boolean
+function registerPacket(channel, callback) end
+function registerCustomPacket(channel, callback) end
+function onPacket(channel, callback) end
+function registerClientPacket(channel, callback) end
+function registerServerPacket(channel, callback) end
+
 -- ============================================
 -- UNREGISTER FUNCTIONS
 -- ============================================
@@ -302,6 +315,15 @@ function unregisterActionBarEvent(callback) end
 --- @param callback function
 --- @return boolean
 function unregisterTitleEvent(callback) end
+
+---Unregister custom packet handler. Aliases: unregisterCustomPacket, unregisterClientPacket, unregisterServerPacket
+---@param channel string packet name
+---@param callback function handler to remove
+---@return boolean
+function unregisterPacket(channel, callback) end
+function unregisterCustomPacket(channel, callback) end
+function unregisterClientPacket(channel, callback) end
+function unregisterServerPacket(channel, callback) end
 
 --- @param ... any
 function print(...) end

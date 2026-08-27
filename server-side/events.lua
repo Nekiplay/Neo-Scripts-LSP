@@ -123,6 +123,32 @@ function registerSluaInvokeCallback(callback) end
 function unregisterSluaInvokeCallback(callback) end
 
 -- ============================================
+-- PACKET EVENTS (neoscripts:lua_packet)
+-- ============================================
+
+---Custom packets client -> server (and optionally server -> client for integrated server).
+---Dispatched by server LuaEvents via ServerPlayNetworking. Payload is JSON-serialized.
+---Aliases: registerCustomPacket, onPacket, registerClientPacket, registerServerPacket
+---Exact channel: callback receives (player, data) where data is decoded Lua value. Wildcard "*" receives (player, channel, data).
+---Examples: server `registerPacket("balance", function(player, data) packets.sendToClient(player, "balance", {value=123}) end)` / client `packets.sendToServer("balance", 10)`
+---@param channel string packet name, e.g. "balance" or "*" for all
+---@param callback fun(player:entity, data:any)|fun(player:entity, channel:string, data:any) Callback
+---@return boolean
+function registerPacket(channel, callback) end
+function registerCustomPacket(channel, callback) end
+function onPacket(channel, callback) end
+function registerClientPacket(channel, callback) end
+function registerServerPacket(channel, callback) end
+
+---@param channel string packet name
+---@param callback function handler to remove
+---@return boolean
+function unregisterPacket(channel, callback) end
+function unregisterCustomPacket(channel, callback) end
+function unregisterClientPacket(channel, callback) end
+function unregisterServerPacket(channel, callback) end
+
+-- ============================================
 -- INTERACTION EVENTS
 -- ============================================
 
